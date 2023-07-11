@@ -1,4 +1,18 @@
-class Solution {
+#include <bits/stdc++.h>
+using namespace std;
+
+template <typename T>
+
+class ListNode {
+
+    int val;
+    ListNode *next;
+
+    ListNode(int val) {
+        this->val=val;
+        next=NULL;
+    }
+    class Solution {
 public:
    
 ListNode* merge(ListNode* a,ListNode* b) {
@@ -22,4 +36,5 @@ ListNode *flatten(ListNode *root) {
     return merge(root,flatten(root->next));
 }
     
+    };
 };
