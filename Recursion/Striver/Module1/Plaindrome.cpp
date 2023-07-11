@@ -5,9 +5,8 @@ public:
     bool issafe(int st,int e,string s){   //start,end 
         while(st<=e) {
             
-            if(s[st++]!=s[e--]) {
-                return false;
-            }
+            if(s[st++]!=s[e--]) return false;
+            
         }
         return true;
     }

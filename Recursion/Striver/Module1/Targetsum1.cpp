@@ -7,10 +7,9 @@ public:
         
         if(ind==candidates.size()) {
             
-            if(target==0) {
-                ans.push_back(ds);
-            }
-              return;
+            if(target==0) 
+            ans.push_back(ds);
+            return;
         }
         
         if(candidates[ind]<=target) {
