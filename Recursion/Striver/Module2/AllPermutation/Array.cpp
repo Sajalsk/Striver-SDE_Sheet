@@ -18,7 +18,7 @@ void help(vector<vector<int>>&ans,vector<int>&ds,vector<int>&nums,int freq[]) {
                 help(ans,ds,nums,freq);
                 
                 freq[i]=0;
-                ds.pop_back();
+                ds.pop_back();                 // backtracking
                 
             }
         }
@@ -30,7 +30,7 @@ void help(vector<vector<int>>&ans,vector<int>&ds,vector<int>&nums,int freq[]) {
         vector<vector<int>>ans;
         vector<int>ds;
         
-       int freq[nums.size()];  // Map
+       int freq[nums.size()];  // Array
         
         for(int i=0;i<n;i++) {
             freq[i]=0;  // All indexes at 0;

@@ -4,10 +4,10 @@ class Solution {
   public:
     bool isSafe1(int row, int col, vector < string > board, int n) {
       
-      int duprow = row; // Starting
+      int duprow = row; // Starting   for preserving the original values used in while loop
       int dupcol = col;
 
-      while (row >= 0 && col >= 0) {
+      while (row >= 0 && col >= 0) {            // starting from last of board
         if (board[row][col] == 'Q')   // check left diagonal
           return false;
         row--;
@@ -22,12 +22,12 @@ class Solution {
           return false;
         col--;
       }
-
-      row = duprow;
+  
+      row = duprow;             // After starting
       col = dupcol;
 
       while (row < n && col >= 0) {
-        if (board[row][col] == 'Q')
+        if (board[row][col] == 'Q')       // check lower right diagonal
           return false;
         row++;
         col--;
@@ -47,10 +47,9 @@ class Solution {
         if (isSafe1(row, col, board, n)) {
           board[row][col] = 'Q';
 
-          // Next
-          solve(col + 1, board, ans, n);
-          // BackTrack
-          board[row][col] = '.';
+          solve(col + 1, board, ans, n);          // Next
+         
+          board[row][col] = '.';                  // BackTrack
         }
       }
     }
@@ -60,9 +59,9 @@ class Solution {
 
       vector < vector < string >> ans;
       vector < string > board(n);
-      string s(n, '.');
+      string s(n, '.');              // 4-> ....
       for (int i = 0; i < n; i++) {
-        board[i] = s;
+        board[i] = s;                     // way of inseting .... in the board array
       }
 
       solve(0, board, ans, n);
