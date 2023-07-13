@@ -6,18 +6,17 @@ using namespace std;
 
 class Solution {
     public:
+        int maxProduct(vector<int> &nums) {
 
-    int Product(vector<int>&nums) {
-          int prod=1,max1=nums[0];   // -3 4 6 -7
-        for(int i=0;i<nums.size();i++) { 
-            prod=1;         
-            for (int j=i;j<nums.size();j++) {
-                prod*=nums[j];
-                max1=max(max1,prod);
+            int curr = INT_MIN, max1 = INT_MIN;
+            for (int i = 0; i < nums.size(); i++) {
+                curr = 1;
+                for (int j = i; j < nums.size(); j++) {
+                    curr *= nums[j];
+                    max1 = max(max1, curr);
+                }
             }
-        }
 
-        return max1;
-    }
- 
+            return max1;
+        }
 };
