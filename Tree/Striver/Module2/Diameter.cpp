@@ -8,38 +8,29 @@ class TreeNode {
     T data;
     vector <TreeNode*> children;
     
-    TreeNode(T data)
-    {
+    TreeNode(T data) {
         this->data=data;
     }
 
 int main() {
     
-    int countNodes(TreeNode * root) {
-        if(root==NULL) {
-            return 0;
-        }
-        
-        int ans = 1+max(countNodes(root->left),countNodes(root->right));
-        
-        return ans;
+    int ans=0,curr;
+     int height(TreeNode* root) {
+         
+        if(!root) return 0;
+
+        int lh=height(root->left);
+        int rh=height(root->right);
+         
+        curr=lh+rh;
+         
+        ans=max(ans,curr);
+        return max(lh,rh)+1;
     }
     
     int diameterOfBinaryTree(TreeNode* root) {
-        
-        if(root==NULL) {
-            return 0 ;
-        }
-        
-        int opt1= countNodes(root->left) + countNodes(root->right);
-
-        int opt2= diameterOfBinaryTree(root->left);   // adding left nodes recur   
-        int opt3= diameterOfBinaryTree(root->right);         // adding right nodes recur
-        
-        int ans  =max(opt1,max(opt2,opt3));
-        
+        height(root);
         return ans;
-        
     }
 }
 

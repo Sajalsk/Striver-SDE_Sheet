@@ -11,10 +11,8 @@ class Solution {
           currxor=0;
     for(int j=i+1;j<nums.size();j++) { // 4 2 2 6 4    6
         currxor=nums[i]^nums[j]; 
-
-        if(currxor==k) {
-            count++;
-        }
+        if(currxor==k)  count++;
+        
     }
 }
     return count;

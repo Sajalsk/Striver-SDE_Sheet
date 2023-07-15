@@ -19,19 +19,16 @@ class TreeNode{
 
 
 int main() {
+
     bool ans=true;
     int checkBalance(TreeNode* root) {
         
-        if(!root)
-            return 0;
+        if(!root) return 0;
         
         int lh = checkBalance(root->left);
         int rh = checkBalance(root->right);
         
-        if(abs(lh-rh) > 1){
-            ans = false;
-        }
-        
+        if(abs(lh-rh) > 1) ans = false;
         return 1 + max(lh, rh);  // since returning i.e its a balanced tree
     }
     

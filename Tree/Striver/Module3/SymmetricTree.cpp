@@ -28,7 +28,7 @@ int main() {
            
            if(curr->val!=temp->val) return false;
            
-           return (check(curr->right,temp->left) && check(curr->left,temp->right));     // INside check       
+           return (check(curr->right,temp->left) && check(curr->left,temp->right));  // Inside check       
         }
         
     bool isSymmetric(TreeNode* root) {

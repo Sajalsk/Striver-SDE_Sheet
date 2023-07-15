@@ -15,8 +15,8 @@ int maxSumIS(int arr[], int n) {
          dp[i] = max(dp[j] + arr[i], dp[i]);
             }
         }
-
-        ans = max(ans, dp[i]);
+        
+        ans=*max_element(dp.begin(),dp.end());
     }
     return ans;
 }

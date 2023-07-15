@@ -18,7 +18,6 @@ public:
       vector<vector<int>> levelOrder(TreeNode* root) {
         
         vector<vector<int>> level;
-       
         if(root==NULL) return level;
     
         queue<TreeNode *> q({root});
@@ -32,13 +31,12 @@ public:
             
             TreeNode* temp = q.front();
             q.pop();
-                
-            if(temp->left)  q.push(temp->left); // keep left of that root to check whether its left exist or not
+            if(temp->left)  q.push(temp->left); // keep left of that root to check whether its left exist not
             if(temp->right) q.push(temp->right);
             
             ans.push_back(temp->val);        // push that root into the ans array.
             
-            }
+         }
             level.push_back(ans);    
         }
         return level;

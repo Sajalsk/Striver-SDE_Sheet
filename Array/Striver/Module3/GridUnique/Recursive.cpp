@@ -3,11 +3,10 @@ using namespace std;
 class Solution {
 public:
     
-      int countPaths(int i,int j,int n,int m)
-    {
-        if(i==(n-1)&&j==(m-1)) return 1;
-        if(i>=n||j>=m) return 0;
-        else return countPaths(i+1,j,n,m)+countPaths(i,j+1,n,m);
+      int countPaths(int i,int j,int m,int n) {
+        if(i==(m-1)&&j==(n-1)) return 1;
+        if(i>=m||j>=n) return 0;
+        else return countPaths(i+1,j,m,n)+countPaths(i,j+1,m,n);
     }
     
     int uniquePaths(int m, int n) {

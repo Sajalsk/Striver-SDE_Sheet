@@ -11,18 +11,15 @@ public:
         
         for(int i=1;i<n;i++) {
             
-            if(count==0) {
+             if(nums[i]==elem)  count++;
+            
+             else if(count==0) {
                 elem=nums[i];
                 count++;
             }
             
-            else if(nums[i]==elem) {
-                count++;
-            }
+            else count--;
             
-            else {
-                count--;
-            }
         }
         
         return elem;

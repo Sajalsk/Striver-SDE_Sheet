@@ -10,32 +10,28 @@ class TreeNode{
     TreeNode* left;
     TreeNode* right; 
     
-    TreeNode( T data)
-    {
+    TreeNode( T data) {
         this->data=data;
         left=NULL;
         right=NULL;
     }
 
 int main() {
-  class Solution {
-  public:
+ class Solution {
+public:
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
         
         if(root==NULL || root==p || root==q) return root;
         
-        TreeNode* left   = lowestCommonAncestor(root->left,  p, q);
-        TreeNode* right  = lowestCommonAncestor(root->right, p, q);
-            
-        if(left==NULL) return right;
-        if(right==NULL) return left;
+        TreeNode*left = lowestCommonAncestor(root->left,p,q);
+        TreeNode*right= lowestCommonAncestor(root->right,p,q);
         
-        else {
-            return root;
-        }
-       
+        if(left==NULL) return right;
+        if(right==NULL) return left;  
+        
+        else return root;
     }
-};                                // end of problem function
-}; // End of main fn
+};                             
+};
 
-};  // End of Class TreeNode;
+};  

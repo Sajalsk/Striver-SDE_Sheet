@@ -5,38 +5,42 @@ class Solution {
 public:
     int count;
    
-    void checkCount(vector<int>& nums, int start, int mid, int end){
+    void checkCount(vector<int>& nums, int low, int mid, int high){
 
         // Two pointers;
-        int l = start, r = mid + 1;
-        while(l <= mid && r <= end){
-            if((long)nums[l] > (long) 2 * nums[r]){
-                count += (mid - l + 1);
-                r++;
+        int left = low, right = mid + 1;
+
+        while(left <= mid && right <= high) {
+            if((long)nums[left] > (long) 2 * nums[right]){
+                count += (mid - left + 1);
+                right++;
             } else{
-                l++;
+                left++;
             }
         }
+
        // Worst case might be nlog(n) 
-        sort(nums.begin() + start, nums.begin() + end + 1);
+        sort(nums.begin() + low, nums.begin() + high + 1);
         return;
-        //Every step sort
+        
     }
         
-    void mergeSort(vector<int>& nums, int start, int end) {
+    void mergeSort(vector<int>& nums, int low, int high) {
 
-        if(start == end) return;
+        if(low == high) return;
         
-        int mid = (start + end)/2;
-        mergeSort(nums,start,mid);
-        mergeSort(nums,mid+1,end);
+        int mid = (low + high)/2;
+
+        mergeSort(nums,low,mid);
+        mergeSort(nums,mid+1,high);
         
-        checkCount(nums,start,mid,end);
+        checkCount(nums,low,mid,high);
         return;
         
     }
 
     int reversePairs(vector<int>& nums) {
+
         if(!nums.size())return 0;
         count = 0;
         mergeSort(nums,0,nums.size()-1);

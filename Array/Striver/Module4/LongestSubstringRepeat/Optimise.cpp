@@ -12,7 +12,7 @@ public:
         
        for (int i=0;i<s.length();i++) {
            if(dict[s[i]]>start) {
-               start=dict[s[i]];
+               start=dict[s[i]];      // inserting the char index at start.
            }
            
            dict[s[i]]=i;
