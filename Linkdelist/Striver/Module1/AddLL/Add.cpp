@@ -34,13 +34,9 @@ public:
             curr->next = new ListNode (sum%10);
             curr = curr->next;
             
-            if(p !=NULL) {
-                p=p->next;
-            };
+            if(p !=NULL) p=p->next;
+            if(q !=NULL) q=q->next;
             
-            if(q !=NULL) {
-                q=q->next;
-            };
         }
         
         if(carry>0) {

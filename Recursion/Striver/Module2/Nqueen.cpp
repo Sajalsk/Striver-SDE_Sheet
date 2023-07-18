@@ -8,7 +8,8 @@ class Solution {
       int dupcol = col;
 
       while (row >= 0 && col >= 0) {            // starting from last of board
-        if (board[row][col] == 'Q')   // check left diagonal
+      
+        if (board[row][col] == 'Q')   // check upper left diagonal
           return false;
         row--;
         col--;
@@ -27,12 +28,13 @@ class Solution {
       col = dupcol;
 
       while (row < n && col >= 0) {
-        if (board[row][col] == 'Q')       // check lower right diagonal
+        if (board[row][col] == 'Q')       // check lower left diagonal
           return false;
         row++;
         col--;
       }
-      return true;
+
+      return true;             // main thing to return 
     }
 
   public:
@@ -59,7 +61,9 @@ class Solution {
 
       vector < vector < string >> ans;
       vector < string > board(n);
+
       string s(n, '.');              // 4-> ....
+
       for (int i = 0; i < n; i++) {
         board[i] = s;                     // way of inseting .... in the board array
       }

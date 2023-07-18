@@ -5,8 +5,7 @@ class Solution
 public:
     bool isvalid(vector<vector<char>> &board, char c, int row, int col)
     {
-        for (int i = 0; i < 9; ++i)
-        {
+        for (int i = 0; i < 9; ++i){
             if (board[row][i] == c)       // colm check
                 return false;
             else if (board[i][col] == c)            // row check

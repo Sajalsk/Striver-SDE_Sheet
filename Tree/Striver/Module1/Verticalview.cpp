@@ -13,7 +13,7 @@ class TreeNode {
         node = NULL;
     }
 
-    template <typename T>
+   
 
 
 class Solution {

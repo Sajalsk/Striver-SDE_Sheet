@@ -4,10 +4,11 @@ using namespace  std;
 class Solution {
 public:
     
-void help(vector<vector<int>>&ans,vector<int>&ds,vector<int>&nums,int freq[]) {
+void help(vector<vector<int>>&ans,vector<int>&ds,vector<int>&nums,vector<int>&freq) {
         
         if(ds.size()==nums.size()) {
             ans.push_back(ds);
+            return;
         }
         
         for(int i=0;i<nums.size();i++) {
@@ -29,16 +30,11 @@ void help(vector<vector<int>>&ans,vector<int>&ds,vector<int>&nums,int freq[]) {
         int n=nums.size();
         vector<vector<int>>ans;
         vector<int>ds;
-        
-       int freq[nums.size()];  // Array
-        
-        for(int i=0;i<n;i++) {
-            freq[i]=0;  // All indexes at 0;
-        }
+     
+        vector<int>freq(n,0);
         
         help(ans,ds,nums,freq);
         
         return ans;
     }
 };
-

@@ -16,7 +16,7 @@ class ListNode {
     public:
 
     ListNode *remove(ListNode *head,int n) {
-            ListNode *start = new ListNode();           // declaration of the start Node to be seen
+            ListNode *start = new ListNode();    // declaration of the start Node to be seen
 
             ListNode*fast=head;
             ListNode*slow=head;

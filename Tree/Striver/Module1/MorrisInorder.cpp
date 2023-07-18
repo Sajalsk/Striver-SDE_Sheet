@@ -8,8 +8,7 @@ class TreeNode {
     T data;
     vector <TreeNode*> children;
     
-    TreeNode(T data)
-    {
+    TreeNode(T data){
         this->data=data;
     }
 

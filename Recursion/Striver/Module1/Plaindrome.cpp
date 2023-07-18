@@ -4,10 +4,9 @@ class Solution {
 public:
     bool issafe(int st,int e,string s){   //start,end 
         while(st<=e) {
-            
-            if(s[st++]!=s[e--]) return false;
-            
+            if(s[st++]!=s[e--]) return false;   
         }
+
         return true;
     }
     
@@ -24,7 +23,7 @@ public:
             
            ds.push_back(s.substr(index,i-index+1));    // Palindromic substring to be inserted
            help(ds,ans,s,i+1);    // Remaining Substring to be check
-           ds.pop_back();
+           ds.pop_back();                 // backtrack
         }
             
         }
@@ -40,3 +39,4 @@ public:
     }
     
 };
+

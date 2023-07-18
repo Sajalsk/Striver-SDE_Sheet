@@ -23,15 +23,12 @@ public:
         ListNode*slow=headB;
         
         while(fast!=NULL || slow!=NULL) {
-           if(fast==slow) {
-                return slow;
-            }
+           if(fast==slow) return slow;
             
             fast=fast==NULL?headB:fast->next;
             slow=slow==NULL?headA:slow->next; 
         }
-        
-        return NULL;
+         return NULL;
 
     }
     }

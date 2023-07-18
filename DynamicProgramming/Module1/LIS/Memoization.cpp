@@ -8,12 +8,12 @@ int LIS (vector<int>& nums,int n , int i ,int j, vector<vector<int>> &dp) {
         if(i==n) return 0;
         if(dp[i][j+1]!=-1)  return dp[i][j+1];
         
-        int l = 0+LIS(nums,n,i+1,j,dp);
+        int len = 0+LIS(nums,n,i+1,j,dp);
             
         if(j==-1 || nums[i]>nums[j]) {
-             l = max(l,1+LIS(nums,n,i+1,i,dp));
+             len = max(len,1+LIS(nums,n,i+1,i,dp));
         }
-           return dp[i][j+1] = l;  
+           return dp[i][j+1] = len;  
     }
     
     int lengthOfLIS(vector<int>& nums){
