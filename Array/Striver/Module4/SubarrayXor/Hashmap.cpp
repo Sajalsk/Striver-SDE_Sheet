@@ -12,8 +12,9 @@ int subarraysXor(vector<int> &arr, int k)
           xorr=xorr^arr[i];             // 0^4=4 
           int curr=xorr^k;                 // then 4^6=2.
 
-          count+=mpp[curr];    // Increasing the value of count with total no. of occurence     Simultaneoulsy
+          count+=mpp[curr]; // Increasing the value of count with total no.of occurence if that present   Simultaneoulsy
           mpp[xorr]++;           // // Increasing the value of  no. of occurence of xorr
     }
     return count;
 }
+

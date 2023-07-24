@@ -4,8 +4,8 @@ class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
         
-        int l=s.length();
-        if(l==0) return 0;
+        if(s.length()==0) return 0;
+
         vector<int>dict(256,-1);    //abcabcbb
         int maxlen=INT_MIN;
         int start=-1;

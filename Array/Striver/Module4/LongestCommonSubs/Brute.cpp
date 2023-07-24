@@ -13,20 +13,17 @@ public:
      
         for(int i=0;i<n-1;i++) {
             
-            if(nums[i]-nums[i+1]==-1){
-                    count++;
-            }
-            
+            if(nums[i]-nums[i+1]==-1)  count++;
             else {
             max1=max(max1,count);
             count=1;
             }
         }
-        
-        max1=max(max1,count);
+          max1=max(max1,count); // for last index
 
         return max1;
        
         
     }
+
 };

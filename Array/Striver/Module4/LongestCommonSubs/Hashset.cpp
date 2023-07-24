@@ -4,10 +4,9 @@ using namespace std;
 class Solution {
 public:
     int longestConsecutive(vector<int>& nums) {
-        if(nums.size()==0) return 0;
 
-        int count = 1;
-        int max1=1;
+        if(nums.size()==0) return 0;
+        int count =1,max1=1;
         
         set<int>s(nums.begin(),nums.end());
         
@@ -17,10 +16,7 @@ public:
                 max1=max(max1,count);
                 count=1;
             }
-        }
-               
-        return max(max1,count);
-    
-        
+        }        
+        return max(max1,count);  
     }
 };

@@ -13,12 +13,10 @@ class Solution{
             sum=A[i];
             for (int j=i+1;j<n;j++) {
                 sum+=A[j];
-                if(sum==0) {
-                    maxlen=max(maxlen,j-i+1);
-                }
+
+                if(sum==0)  maxlen=max(maxlen,j-i+1);
             }
         }
-        
         return maxlen;
     }
 };
