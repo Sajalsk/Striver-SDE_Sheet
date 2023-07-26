@@ -7,9 +7,7 @@ public:
         double ans=1.0;
         long long m=n;
         
-        if(m<0) {
-            m=m*-1;
-        }
+        if(m<0)  m-1;
         
         while(m>0) {
             
@@ -24,10 +22,7 @@ public:
             }
         }
         
-        if(n<0) {
-            return double(1.0)/double(ans);
-        }
-        
+        if(n<0)  return double(1.0)/double(ans);
         return ans;
     }
 };

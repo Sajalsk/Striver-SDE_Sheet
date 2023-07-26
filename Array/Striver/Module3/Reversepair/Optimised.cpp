@@ -3,7 +3,7 @@ using namespace std;
 
 class Solution {
 public:
-    int count;
+    int count=0;
    
     void checkCount(vector<int>& nums, int low, int mid, int high){
 
@@ -14,9 +14,7 @@ public:
             if((long)nums[left] > (long) 2 * nums[right]){
                 count += (mid - left + 1);
                 right++;
-            } else{
-                left++;
-            }
+            } else left++;
         }
 
        // Worst case might be nlog(n) 
@@ -42,7 +40,7 @@ public:
     int reversePairs(vector<int>& nums) {
 
         if(!nums.size())return 0;
-        count = 0;
+       
         mergeSort(nums,0,nums.size()-1);
         return count;
     }

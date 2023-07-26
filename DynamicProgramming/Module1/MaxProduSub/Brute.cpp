@@ -1,6 +1,3 @@
-// Input: nums = [2,3,-2,4]
-// Output: 6
-// Explanation: [2,3] has the largest product 6.
 #include <bits/stdc++.h>
 using namespace std;
 

@@ -6,7 +6,7 @@ public:
 int LIS (vector<int>& nums,int n , int i ,int j, vector<vector<int>> &dp) {
         
         if(i==n) return 0;
-        if(dp[i][j+1]!=-1)  return dp[i][j+1];
+        if(dp[i][j+1]!=-1)  return dp[i][j+1];               // imp
         
         int len = 0+LIS(nums,n,i+1,j,dp);
             

@@ -10,8 +10,7 @@ public:
         for (int i=0;i<n;i++) {
             prod= prod*nums[i];
             max1=max(max1,prod);
-            if(prod==0) prod=1;
-            
+            if(prod==0) prod=1;   
         }
         
         prod=1;

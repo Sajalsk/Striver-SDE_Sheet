@@ -1,32 +1,28 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 class Solution {
 public:
-    
-    int help(int i,int j,string text1,string text2,vector<vector<int>>&dp) {
+    bool wordBreak(string s, unordered_set<string> &set, vector<int> &dp, int start) {
+
+        if(start == s.size())  return true;
+        if(dp[start] != -1)  return dp[start];
         
-        if(i<0 || j<0 ) {
-            return 0;
-        }
-        
-        if(dp[i][j]!=-1) {
-            return dp[i][j];
-        }
-        if(text1[i]==text2[j]) {
-            return dp[i][j]=1+help( i-1,j-1,text1,text2,dp);
+        for(int i=start; i<s.size(); i++) {
+            if(set.count(s.substr(start, i+1-start)) && wordBreak(s, set, dp, i+1)){
+                dp[start] = true;
+                return true;
+            }
         }
 
-return dp[i][j]=max(help(i-1,j,text1,text2,dp),help(i,j-1,text1,text2,dp));
-                        
+        return dp[start] = false;
     }
-    int longestCommonSubsequence(string text1, string text2) {
-       
-       
-        int n=text1.length();
-        int m=text2.length();
-         vector<vector<int>>dp(n+1,vector<int>(m+1,-1));
-        return help(n-1,m-1,text1,text2,dp);
-        
-        
+
+    bool wordBreak(string s, vector<string>& wordDict) {
+
+        vector<int> dp(s.size(), -1);
+        unordered_set<string> set(wordDict.begin(), wordDict.end());
+
+        return wordBreak(s, set, dp, 0);
     }
 };
