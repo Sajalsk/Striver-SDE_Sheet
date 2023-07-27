@@ -4,8 +4,8 @@ class Solution {
   public:
     bool isSafe1(int row, int col, vector < string > board, int n) {
       
-      int duprow = row; // Starting   for preserving the original values used in while loop
-      int dupcol = col;
+      int cR = row;   // Starting   for preserving the original values used in while loop
+      int cC = col;
 
       while (row >= 0 && col >= 0) {            // starting from last of board
       
@@ -15,8 +15,8 @@ class Solution {
         col--;
       }
 
-      row = duprow;   // After staring
-      col = dupcol;
+      row = cR;   // After staring
+      col = cC;
       
       while (col >= 0) {
         if (board[row][col] == 'Q')   // check left side
@@ -24,8 +24,8 @@ class Solution {
         col--;
       }
   
-      row = duprow;             // After starting
-      col = dupcol;
+      row = cR;             // After starting
+      col = cC;
 
       while (row < n && col >= 0) {
         if (board[row][col] == 'Q')       // check lower left diagonal
@@ -37,7 +37,6 @@ class Solution {
       return true;             // main thing to return 
     }
 
-  public:
     void solve(int col, vector < string > & board, vector < vector < string >> & ans, int n) {
 
       if (col == n) {
@@ -56,7 +55,6 @@ class Solution {
       }
     }
 
-  public:
     vector < vector < string >> solveNQueens(int n) {
 
       vector < vector < string >> ans;
@@ -65,7 +63,7 @@ class Solution {
       string s(n, '.');              // 4-> ....
 
       for (int i = 0; i < n; i++) {
-        board[i] = s;                     // way of inseting .... in the board array
+        board[i] = s;                     // Way of inserting '....' in the board array
       }
 
       solve(0, board, ans, n);

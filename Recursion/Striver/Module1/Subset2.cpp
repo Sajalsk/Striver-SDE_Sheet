@@ -6,11 +6,10 @@ public:
         
         ans.push_back(ds);
         
-        for(int i=index;i<nums.size();i++){
-            if(i>index && nums[i] == nums[i-1]) {
-                continue;
-            }
-            
+        for(int i=index;i<nums.size();i++) {
+
+            if(i>index && nums[i] == nums[i-1])  continue;
+        
             ds.push_back(nums[i]);       
             solve(nums,ds,ans,i+1);
             ds.pop_back();             // Backtracking happens at the same time.

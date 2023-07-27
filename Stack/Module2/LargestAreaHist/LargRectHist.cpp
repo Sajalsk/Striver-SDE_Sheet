@@ -12,7 +12,7 @@ public:
 
        stack<int>st;
         
-       for (int i=0;i<n;i++) {
+        for (int i=0;i<n;i++) {
         while(!st.empty() && heights[i]<=heights[st.top()]) {
             st.pop();
         }
@@ -23,12 +23,12 @@ public:
 
        while(!st.empty()) st.pop();
 
-       for (int i=n-1;i>=0;i--) {
-        while(!st.empty() && heights[i]>=heights[st.top()]) {
+       for (int i=n-1;i>=0;i--) {     
+        while(!st.empty() && heights[i]<=heights[st.top()]) {
             st.pop();
         }
 
-        l[i]=(st.empty())?n-1:st.top()-1;
+        r[i]=(st.empty())?n-1:st.top()-1;
         st.push(i);
        }
 
@@ -40,4 +40,3 @@ public:
       return maxA;
     }
 };
-

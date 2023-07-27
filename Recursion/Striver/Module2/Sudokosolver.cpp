@@ -1,23 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
-class Solution
-{
+
+class Solution {
 public:
-    bool isvalid(vector<vector<char>> &board, char c, int row, int col)
-    {
-        for (int i = 0; i < 9; ++i){
-            if (board[row][i] == c)       // colm check
-                return false;
-            else if (board[i][col] == c)            // row check
-                return false;
-            else if (board[3 * (row / 3) + i / 3][3 * (col / 3) + i % 3] == c)     // 9*9 check
+    bool isvalid(vector<vector<char>> &board, char c, int row, int col) {
+        
+        for (int i = 0; i < 9; ++i) {
+
+            if (board[row][i] == c)   return false;      // colm check
+            else if (board[i][col] == c)   return false;          // row check
+
+            else if ( board[3 * (row / 3) + i / 3][3 * (col / 3) + i % 3] == c)     // 9*9 check
                 return false;
         }
-        return true;
+         return true;
     }
 
-    bool solver(vector<vector<char>> &board, int start)
-    {
+    bool solver(vector<vector<char>> &board, int start) {
+
         for (int row = start; row < 9; ++row) {
           for (int col = 0; col < 9; ++col) {
             if (board[row][col] == '.') {
@@ -26,7 +26,7 @@ public:
                    board[row][col] = c;
                    
                     if (solver(board, row))
-                     return true; // All enteries are filled and reached at last
+                    return true; // All enteries are filled and reached at last
                     else
                     board[row][col] = '.';
                         }
@@ -39,8 +39,7 @@ public:
         return true;
     }
 
-    void solveSudoku(vector<vector<char>> &board)
-    {
+    void solveSudoku(vector<vector<char>> &board) {
         solver(board, 0);
     }
 };

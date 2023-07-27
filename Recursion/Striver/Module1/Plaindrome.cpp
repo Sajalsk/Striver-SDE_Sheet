@@ -1,13 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 class Solution {
 public:
     bool issafe(int st,int e,string s){   //start,end 
         while(st<=e) {
             if(s[st++]!=s[e--]) return false;   
         }
-
-        return true;
+         return true;
     }
     
     void help(vector<string>&ds,vector<vector<string>>&ans,string s,int index) {
