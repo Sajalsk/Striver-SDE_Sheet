@@ -17,9 +17,10 @@ public:
         
         Node* current=root;
 
-        while(current->left!=NULL) {
+        while(!current->left) {
+
         Node* temp=current;
-        while(current!=NULL){ 
+        while(!current) { 
           current->left->next=current->right;
           current->right->next=current->next==NULL?NULL: current->next->left;
           current=current->next;

@@ -20,7 +20,7 @@ class Solution {
         
         if(root->val==X) return root->val;
 
-        if(root->val<X) {
+        if(X>root->val) {
             floor=root->val;
             root=root->right;
         } 

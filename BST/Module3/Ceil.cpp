@@ -13,26 +13,25 @@ public:
 
     class Solution {
         public:
-        #include <bits/stdc++.h> 
+      
 
 int findCeil(BinaryTreeNode<int> *TreeNode, int x){
    
-   int ans =-1;
-   while(node) {
+   int ceil =-1;
+   while(TreeNode) { 
 
-       if(x==TreeNode->data)  return TreeNode->data;
+       if(TreeNode->data==x)  return TreeNode->data;
           
-       if(x>TreeNode->data)  TreeNode=TreeNode->right;
-          
-       else {
-             ans=node->data;
-             TreeNode=TreeNode->left;
+       if(x<TreeNode->data)  {
+
+         ceil=TreeNode->data;
+         TreeNode=TreeNode->left;
        }
+          
+       else  TreeNode=TreeNode->right;
    }
-
-   return ans;
+    return ceil;
 }
-
-    };
+ };
 
 };

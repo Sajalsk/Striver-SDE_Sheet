@@ -23,7 +23,7 @@ public:
                
             else return root;
         }
-           return root;
+           return root;     // base case;
     }
 
     };

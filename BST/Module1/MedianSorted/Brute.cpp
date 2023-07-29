@@ -23,10 +23,11 @@ public:
         sort(res.begin(),res.end());
         int mid= (n-1)/2;
         
-        if(n%2==0) return double  (res[mid+1] + res[mid])/2;
-        else  return   double (res[mid]);     
+     return   (n%2==0) ? double (res[mid+1] + res[mid])/2 : double (res[mid]);  
+        
     }
 };
+
 
 };
 

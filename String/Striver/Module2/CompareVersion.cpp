@@ -10,12 +10,10 @@ public:
         int len1=version1.size();
         int len2=version2.size();
         
-        int temp1,temp2;
-        
         while(i<len1 || j<len2) {
             
-            temp1=0;
-            temp2=0;
+           int temp1=0;
+           int temp2=0;
             
             while(i<len1 && version1[i]!='.') {
                 

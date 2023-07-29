@@ -4,9 +4,8 @@ class Solution{
 public:
    int Solve(vector<int>& arr, int i, int j){
     
-    if(i == j)
-        return 0;
-        
+    if(i == j)  return 0;
+
     int min1 = INT_MAX;
     
     for(int k = i; k<= j-1; k++){
@@ -19,7 +18,7 @@ public:
 
 int matrixMultiplication(vector<int>& arr, int N){
     
-    int i =1;
+    int i = 1;
     int j = N-1;
     
     return Solve(arr,i,j); 

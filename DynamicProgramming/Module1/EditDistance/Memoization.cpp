@@ -17,11 +17,11 @@ return dp[i][j]= 1+min(help(i-1,j,word1,word2,dp),min(help(i,j-1,word1,word2,dp)
     
     int minDistance(string word1, string word2) {
         
-        int n=word1.length();
-        int m=word2.length();
+        int n=word1.length()-1;
+        int m=word2.length()-1;
         
-        vector<vector<int>>dp(n,vector<int>(m,-1));
+        vector<vector<int>>dp(n+1,vector<int>(m+1,-1));
         
-       return  help(n-1,m-1,word1,word2,dp);
+       return  help(n,m,word1,word2,dp);
     }
 };

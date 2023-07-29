@@ -1,4 +1,5 @@
 // String matching Algorithm
+// Knuth Morris Prat algo for string matching
 
 #include <bits/stdc++.h>
 using namespace std;

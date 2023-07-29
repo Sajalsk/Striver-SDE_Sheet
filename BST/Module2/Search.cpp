@@ -33,13 +33,13 @@ class Solution {
 public:
     TreeNode* searchBST(TreeNode* root, int val) {
       
-        TreeNode *temp = root ; 
+        TreeNode *curr = root ; 
 
-        while(temp != NULL) {
+        while(curr != NULL) {
             
-            if (temp -> val == val)  return temp ; 
-            if (temp -> val > val)  temp = temp -> left; 
-            else  temp = temp -> right ;    
+            if (curr -> val == val)  return curr ; 
+            if (curr -> val > val)  curr = curr -> left; 
+            else  curr = curr -> right ;    
         }
         return NULL ;  
     }

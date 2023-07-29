@@ -6,21 +6,25 @@ class Solution {
 public:
     int strStr(string haystack, string needle) {
         
-       if(haystack.size() < needle.size()) return -1;
-        int h = 0, n = 0;
-        while(h < haystack.size() && n < needle.size()) {
-            if(haystack[h] == needle[n]) {
-                h++;
-                n++;
+        int i=0,j=0;
+        
+        int h=haystack.length();
+        int n=needle.length();
+        
+        while(i<h  &&  j<n) {
+            
+            if(haystack[i]==needle[j]) {
+                i++; j++;  
+                
             }
-            else {
-                // h must increase if else it will TLE
-                // go back the index before n elements & increase 1 index
-                h  = h - n +1;
-                //reset index needle
-                n = 0;
-            }
-        }
-        return n == needle.size() ? h-n : -1;
+            
+             else {
+                j=0; 
+                i=i-j+1;  
+             }  
+            
+        }  
+         return j==n?i-j:-1;
+        
     }
 };

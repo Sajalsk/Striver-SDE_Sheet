@@ -15,9 +15,9 @@ public:
     
     int minDistance(string word1, string word2) {
         
-        int n=word1.length();
-        int m=word2.length();
+        int n=word1.length()-1;
+        int m=word2.length()-1;
         
-       return  help(n-1,m-1,word1,word2);
+       return  help(n,m,word1,word2);
     }
 };

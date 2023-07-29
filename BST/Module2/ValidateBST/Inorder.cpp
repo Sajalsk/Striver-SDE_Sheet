@@ -12,17 +12,22 @@ public:
     }
     
 class Solution {
-public:
-    vector<int> nodes;
-    void inorder(TreeNode* root) {
+public: 
+    vector<int> res;
+    void inorder(TreeNode* root) {          // Inorder keeps the BT in sorted way
+
         if (root->left) inorder(root->left);
-        nodes.push_back(root->val);
+
+        res.push_back(root->val);
+
         if (root->right) inorder(root->right);
     }
     bool isValidBST(TreeNode* root) {
+
         inorder(root);
-        for (int i = 0; i < nodes.size() - 1; i++) {
-            if (nodes[i] >= nodes[i+1]) return false;
+
+        for (int i = 0; i < res.size() - 1; i++) {
+            if (res[i] >= res[i+1]) return false;
         }
         return true;
     }

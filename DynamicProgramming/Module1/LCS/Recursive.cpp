@@ -8,8 +8,9 @@ public:
         
         if(i<0 || j<0 )  return 0;
            
- if(text1[i]==text2[j]) return 1+help( i-1,j-1,text1,text2);
- return max(help(i-1,j,text1,text2),help(i,j-1,text1,text2));
+        if(text1[i]==text2[j]) return 1+help( i-1,j-1,text1,text2);
+        
+       return max(help(i-1,j,text1,text2),help(i,j-1,text1,text2));
                         
     }
     

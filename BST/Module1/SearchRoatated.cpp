@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 template <typename T>
+
 class Node {
 public:
     T data;
@@ -8,7 +9,9 @@ public:
 
     Node(T data) {
         this->data = data;
-    }class Solution {
+    }
+    
+class Solution {
 public:
     int search(vector<int>& nums, int target) {
         
@@ -16,6 +19,7 @@ public:
         int high=nums.size()-1;
         
         while(high>=0) {
+
             if(nums[low]==target) return low;
             else if (nums[high]==target) return high;
             else {
@@ -23,8 +27,7 @@ public:
                 low++;
             }
         }
-        
-        return -1;
+         return -1;
     }
 };
 
