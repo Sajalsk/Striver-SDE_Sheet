@@ -26,20 +26,20 @@ public:
             
             vector<int> ans;
             int size = q.size();
-          
+
             for (int i=0;i<size;i++) {
             
-            TreeNode* temp = q.front();
+            TreeNode* node = q.front();
             q.pop();
-            if(temp->left)  q.push(temp->left); // keep left of that root to check whether its left exist not
-            if(temp->right) q.push(temp->right);
+
+            if(node->left)  q.push(node->left); // keep left of that root to check whether its left exist not
+            if(node->right) q.push(node->right);
             
-            ans.push_back(temp->val);        // push that root into the ans array.
-            
+            ans.push_back(node->val);        // push that root into the ans array.  
          }
             level.push_back(ans);    
         }
-        return level;
+         return level;
     }
 };
 

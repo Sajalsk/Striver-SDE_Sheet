@@ -23,25 +23,22 @@ public:
         ans = ans * mid;
         if (ans > m)  return 2;  
     }
-
-    if (ans == m)  return 1;
-    return 0;
+     if (ans == m)  return 1;
+     return 0;
 }
-
- 
 
 int NthRoot(int n, int m) {
 
-    int low = 1, high = m,mid,check;
+    int low = 1, high = m , mid , check;
 
     while (low <= high) {
 
          mid = (low + high) / 2;  
          check = func(mid, n, m);
 
-        if (check == 1)  return mid;
+        if (check == 1)      return mid;
         else if (check == 0) low = mid + 1;
-        else high = mid - 1;   
+        else if (check==2)   high = mid - 1;   
     }
      return -1;
 }

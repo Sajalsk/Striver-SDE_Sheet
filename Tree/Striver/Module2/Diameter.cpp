@@ -12,9 +12,10 @@ class TreeNode {
         this->data=data;
     }
 
-int main() {
+class Solution { 
+public:
     
-    int ans=0,curr;
+     int ans=0,curr;
      int height(TreeNode* root) {
          
         if(!root) return 0;
@@ -27,11 +28,10 @@ int main() {
         ans=max(ans,curr);
         return max(lh,rh)+1;
     }
-    
     int diameterOfBinaryTree(TreeNode* root) {
+        
         height(root);
         return ans;
     }
-}
-
+};
 };

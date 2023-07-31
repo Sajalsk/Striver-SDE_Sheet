@@ -10,46 +10,50 @@ class TreeNode{
     TreeNode* left;
     TreeNode* right; 
     
-    TreeNode( T data)
-    {
+    TreeNode( T data) {
         this->data=data;
         left=NULL;
         right=NULL;
     }
 
-int main() {
         class Solution {
-public:
+        public:
+
     vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
         
         vector<vector<int>> ans;
-        if(!root==) return ans;
+        if(!root) return ans;
         
         queue<TreeNode*> q;
         q.push({root});
       
         while(!q.empty()) {
-            int a=q.size();
-             vector<int> v;
+
+            int size=q.size();
+            vector<int> v;
               
-              for(int i=0;i<a;i++) {
+            for(int i=0;i<size;i++) {
+
                 TreeNode* node=q.front();
                 q.pop();
-                v.push_back(node->val);
-                if(node->left != NULL) q.push(node->left);
+
+                if(node->left != NULL)  q.push(node->left);
                 if(node->right != NULL) q.push(node->right);
+
+                v.push_back(node->val);
                
             }
-            ans.push_back(v);
+             ans.push_back(v);
         }
 
    for(int i=0;i<ans.size();i++){
-      if(i%2!=0){
+
+      if(i%2!=0) {
           reverse(ans[i].begin(),ans[i].end());
       }
    }
         return ans;
     }
-};
-        }
+
+    }
 };

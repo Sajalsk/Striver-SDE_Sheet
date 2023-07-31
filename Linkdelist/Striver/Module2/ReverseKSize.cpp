@@ -12,14 +12,14 @@ class ListNode {
         this->data=data;
         next=NULL;
     }
+
     class Solution {
-public:
+    public:
+
     ListNode* reverseKGroup(ListNode* head, int k) {
         
         // Base case
-        if (head == NULL || k == 1) {
-            return head;
-        }
+        if (head == NULL || k == 1) return head;
 
         //step 1: reverse first k Nodes          // 1 2 3 4 5 6  - 2 (1&2)
         ListNode* curr = head;
@@ -46,8 +46,7 @@ public:
                 prev = fast;
                 count--;
             }
-            
-            return curr;
+             return curr;
         }
 
         // step 2: recursion for k groups
