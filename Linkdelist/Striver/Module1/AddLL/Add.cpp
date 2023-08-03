@@ -23,10 +23,11 @@ public:
         ListNode *curr = ans;
         
         int carry=0;
+
         while (p!=NULL || q!=NULL ) {
             
-            int x= (p!=NULL) ? p->val : 0;
-            int y= (q!=NULL) ? q->val : 0;
+            int x = (p!=NULL) ? p->val : 0;
+            int y = (q!=NULL) ? q->val : 0;
             int sum=x+y+carry;
             
             carry = sum/10;

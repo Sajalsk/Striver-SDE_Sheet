@@ -9,42 +9,43 @@ class ListNode {
     ListNode *next;
 
     ListNode(int data) {
-        this->data=data;
-        next=NULL;
+        this->data = data;
+        next = NULL;
     }
-    class Solution {
 
+   class Solution {
 public:
-    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+        
+            if (list1 == NULL) return list2;
+            if (list2 == NULL)  return list1;
+               
+            ListNode *res = new ListNode(-1);
+            ListNode *temp = res;
 
-        // when list1 is empty then 
-        // our output will be same as list2
-        if(l1 == NULL) return l2;
-        if(l2 == NULL) return l1;
+            ListNode *l1 = list1;
+            ListNode *l2 = list2;
 
-        // pointing l1 and l2 to smallest and greatest one
-        if(l1->val > l2->val) swap(l1,l2);
+            while (l1 && l2) {
 
-        // act as head of resultant merged list
-        ListNode* res = l1;
+                if (l1->val < l2->val) {
+                    temp->next = l1;
+                    l1 = l1->next;
+                }
+                 else {
+                    temp->next = l2;
+                    l2 = l2->next;
+                }
 
-        while(l1 != NULL && l2 != NULL) {
- 
-            ListNode* temp = NULL;
-
-            while(l1 != NULL && l1->val <= l2->val) {
-
-                temp = l1; 
-                l1 = l1->next;
+                temp = temp->next;
             }
+            if (l1)
+                temp->next = l1;
+            else
+                temp->next = l2;
 
-           
-            temp->next = l2;
-            swap(l1,l2);
-        }
-
-        return res;
+            return res->next;
+        
     }
 };
-
 };

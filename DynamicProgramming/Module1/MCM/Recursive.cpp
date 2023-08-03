@@ -8,9 +8,10 @@ public:
 
     int min1 = INT_MAX;
     
-    for(int k = i; k<= j-1; k++){
+    for(int k = i; k<= j-1; k++) {
         
         int ans = Solve(arr,i,k) + Solve(arr, k+1,j) + arr[i-1]*arr[k]*arr[j];
+        
         min1 = min(min1,ans);   
     }
      return min1;

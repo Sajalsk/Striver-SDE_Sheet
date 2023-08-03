@@ -19,19 +19,22 @@ public:
     ListNode* reverseList(ListNode* head) {
         
         if(head==NULL)return head;
+
         stack<int> stk;
         ListNode *curr=head;
-        while(curr!=NULL){
+
+        while(curr!=NULL) {
             stk.push(curr->val);
             curr=curr->next;
         }
+
         curr=head;
-        while(curr!=NULL){
+        while(curr!=NULL) {
             curr->val=stk.top();
             stk.pop();
             curr=curr->next;
         }
-        return head;
+         return head;
     }
 };
 

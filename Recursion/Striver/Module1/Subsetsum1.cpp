@@ -4,15 +4,15 @@ class Solution
 {
 public:
 
-void help(int i,vector<int>&arr,int N , vector<int>&res,int sum) {
+void help(int index,vector<int>&arr,int N , vector<int>&res,int sum) {
     
-    if(i==N) {
+    if(index==N) {
         res.push_back(sum);
         return;  
     }
     
-    help(i+1,arr,N,res,sum+arr[i]);         // Taken
-    help(i+1,arr,N,res,sum);                // Not Taken
+    help(index+1,arr,N,res,sum+arr[index]);         // Taken
+    help(index+1,arr,N,res,sum);                // Not Taken
 } 
     vector<int> subsetSums(vector<int> arr, int N)
     {

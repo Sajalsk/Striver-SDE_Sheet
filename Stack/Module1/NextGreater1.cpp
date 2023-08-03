@@ -20,14 +20,12 @@ public:
             int res=(st.empty())? -1:st.top();
           
             mp.insert({ele,res});
-            st.push(ele);
-            
+            st.push(ele);   
         }
 
-        for(auto x:nums1){  
-            ans.push_back(mp[x]);
-        }
-         return ans;
+        for(auto x:nums1)  ans.push_back(mp[x]);
+
+        return ans;
 
     }
 };

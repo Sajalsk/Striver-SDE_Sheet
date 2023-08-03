@@ -12,7 +12,7 @@ public:
             return dp[i][j]=1+help( i-1,j-1,text1,text2,dp);
         }
 
-return dp[i][j]=max(help(i-1,j,text1,text2,dp),help(i,j-1,text1,text2,dp));
+        return dp[i][j]=max(help(i-1,j,text1,text2,dp),help(i,j-1,text1,text2,dp));
                         
     }
     int longestCommonSubsequence(string text1, string text2) {
@@ -20,6 +20,7 @@ return dp[i][j]=max(help(i-1,j,text1,text2,dp),help(i,j-1,text1,text2,dp));
        
         int n=text1.length();
         int m=text2.length();
+
         vector<vector<int>>dp(n+1,vector<int>(m+1,-1));
         return help(n-1,m-1,text1,text2,dp);
         

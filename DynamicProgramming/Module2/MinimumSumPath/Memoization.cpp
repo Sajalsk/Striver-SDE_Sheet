@@ -26,7 +26,6 @@ int help(int i, int j, int n, int m, vector<vector<int>>& grid, vector<vector<in
 
         vector<vector<int>> dp(n + 1, vector<int> (m + 1,-1));
         
-        int ans = help(0, 0, n, m, grid, dp);
-        return ans;
+        return help(0, 0, n, m, grid, dp);  
     }
 };

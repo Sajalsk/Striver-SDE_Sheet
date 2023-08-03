@@ -22,6 +22,7 @@ public:
         if(issafe(index,i,s)) {         // Working in case of returning true;
             
            ds.push_back(s.substr(index,i-index+1));    // Palindromic substring to be inserted
+           
            help(ds,ans,s,i+1);    // Remaining Substring to be check
            ds.pop_back();                 // backtrack
         }
