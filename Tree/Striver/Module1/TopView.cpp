@@ -8,18 +8,15 @@ class TreeNode {
     T data;
     vector <TreeNode*> children;
     
-    TreeNode(T data)
-    {
+    TreeNode(T data) {
         this->data=data;
     }
 
-class Solution
-{
+class Solution {
     public:
     //Function to return a list of nodes visible from the top view 
     //from left to right in Binary Tree.
-    vector<int> topView(Node *root)
-    {
+    vector<int> topView(Node *root) {
        vector<int> ans; 
 
         if(root == NULL) return ans; 

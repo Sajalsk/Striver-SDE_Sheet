@@ -9,7 +9,7 @@ class Solution {
 
       while (row >= 0 && col >= 0) {            // starting from last of board
       
-        if (board[row][col] == 'Q')   // check upper left diagonal
+        if (board[row][col] == 'Q')   // check upper left diagonal    (UL)
           return false;
         row--;
         col--;
@@ -19,7 +19,7 @@ class Solution {
       col = cC;
       
       while (col >= 0) {
-        if (board[row][col] == 'Q')   // check left side
+        if (board[row][col] == 'Q')   // check left side        (L)
           return false;
         col--;
       }
@@ -28,7 +28,7 @@ class Solution {
       col = cC;
 
       while (row < n && col >= 0) {
-        if (board[row][col] == 'Q')       // check lower left diagonal
+        if (board[row][col] == 'Q')       // check lower left diagonal        (LL)
           return false;
         row++;
         col--;

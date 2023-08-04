@@ -20,6 +20,7 @@ class TreeTreeNode{
     void mirror1(TreeNode *root) {
 
         if(root) {
+            
             TreeNode *temp= root->left;     // swapping
             root->left= root->right;
             root->right= temp;

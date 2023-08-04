@@ -10,8 +10,7 @@ class TreeNode{
     TreeNode* left;
     TreeNode* right; 
     
-    TreeNode( T data)
-    {
+    TreeNode( T data) {
         this->data=data;
         left=NULL;
         right=NULL;
@@ -19,27 +18,31 @@ class TreeNode{
 
 int main() {
 
-       class Solution {
-       public:
-
-    int solve(TreeNode *root, int &maxi) {
-        if(!root) return 0;
-
-        int lsum = solve(root->left, maxi);
-        int rsum = solve(root->right, maxi);
-
-        if(lsum < 0) lsum = 0;
-        if(rsum < 0) rsum = 0;
+     class Solution {
+public:
+    
+    int Solve(TreeNode*root,int &max1) {
         
-        maxi = max(maxi, lsum + rsum + root->val);  // Whole sum choice path of that maximum particular Node.
-
-        return root->val + max(lsum, rsum);
+        if(!root) return 0;
+        
+        int lh =Solve(root->left,max1);
+        int rh =Solve(root->right,max1);
+        
+        if(lh<0) lh=0;
+        if(rh<0) rh=0;
+        
+        max1 = max(max1,root->val+lh+rh);
+        
+        return root->val+max(lh,rh);
     }
-
+    
     int maxPathSum(TreeNode* root) {
-        int maxi = INT_MIN;
-        solve(root, maxi);
-        return maxi;
+        
+        int max1=INT_MIN;
+        
+        Solve(root,max1);
+        
+        return max1;
     }
 };
 };                     
