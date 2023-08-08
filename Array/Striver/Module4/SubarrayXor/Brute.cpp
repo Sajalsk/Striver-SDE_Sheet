@@ -11,7 +11,7 @@ class Solution {
     for (int i=0;i<nums.size();i++) {
           currxor=0;
         for(int j=i;j<nums.size();j++) {          // 4 2 2 6 4    6
-          currxor=currxor^nums[j]; 
+          currxor^=nums[j]; 
           if(currxor==k)  count++; 
     }
   }
@@ -28,7 +28,7 @@ for(int i=0;i<n;i++) {
         int xorr=0;
         for(int k=i;k<=j;k++) {
             (xorr^=nums[k])
-            if(xorr==res) coutn++;
+            if(xorr==res) count++;
         }
     }
 }

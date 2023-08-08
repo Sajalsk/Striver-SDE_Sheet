@@ -1,5 +1,3 @@
-// Not working
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -11,14 +9,15 @@ public:
 
         int l = start, r = mid + 1;
         while(l <= mid && r <= end) {
+
             if((long)arr[l] > (long)  arr[r]) {  // change in line
                 count += (mid - l + 1);
                 r++;
-            } else{
-                l++;
-            }
+            } else  l++;
         }
-    
+
+    // Not working Solution
+
         sort(arr.begin() + start, arr.begin() + end + 1);
         return;
       
@@ -41,3 +40,17 @@ int getInversions(vector<int>&arr, int n){
 }
 
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+

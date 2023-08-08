@@ -11,16 +11,11 @@ public:
         for (int i=0;i<n;i++) {
             count=1;
             for (int j=i+1;j<n;j++) {
-                if(nums[i]==nums[j]) {
-                    count++;
-                }
+                if(nums[i]==nums[j])   count++;
             }
             
-            if(count>a) {
-                return nums[i];
-            }
+            if(count>a) return nums[i];
         }
-        
-        return -1;
+         return -1;
     }
 };

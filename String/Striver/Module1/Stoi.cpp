@@ -8,6 +8,7 @@ public:
         int len = s.size();
         double num = 0;
         int i=0;
+        
         while(s[i] == ' ') i++;   // filling gaps
         
         bool positive = s[i] == '+';

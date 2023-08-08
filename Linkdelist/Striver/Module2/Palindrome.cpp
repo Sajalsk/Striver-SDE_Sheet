@@ -22,13 +22,11 @@ public:
             nums.push_back(head->val);
             head=head->next;
         }
-        int n=nums.size();
-        
-        for(int i=0;i<n;i++) {
+    
+        for(int i=0;i<nnums.size();i++) {
             if(nums[i]!=nums[n-i-1]) return false;
         }
-        
-        return true;
+         return true;
     }
 };
 

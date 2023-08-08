@@ -15,16 +15,15 @@ public:
         // Odd length
         for(int i = 0; i < n-1; ++i){
             int l = i, r = i;
-            while(l >= 0 && r < n){
-                if(s[l] == s[r]){
+            while(l >= 0 && r < n) {
+                if(s[l] == s[r]) {
                     l--; r++;
-                }else
-                    break;
+                } else break;      
             }
 
             int len = r-l-1;
           
-            if(len > max_len){
+            if(len > max_len) {
                 max_len = len;
                 st = l+1;
                 end = r-1;
@@ -32,15 +31,16 @@ public:
         }
         
         // Even length
-        for(int i = 0; i < n-1; ++i){
+        for(int i = 0; i < n-1; ++i) {
             int l = i, r = i+1;
-            while(l >= 0 && r < n){
-                if(s[l] == s[r]){
+            while(l >= 0 && r < n) {
+                if(s[l] == s[r]) {
                     l--; r++;
-                }else
-                    break;
+                } else  break;      
             }
+
             int len = r-l-1;
+
             if(len > max_len){
                 max_len = len;
                 st = l+1;

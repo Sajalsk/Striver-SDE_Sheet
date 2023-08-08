@@ -5,18 +5,19 @@ class Solution {
 
        vector<int> bfsOfGraph(int V, vector<int> adj[]) {   // V = no. of vertices;
 
-        int visited[V]={0};
-        vector<int>bfs;
-        queue<int>q;
+        vector<int>visited(V,0);
+        vector<int>res;
 
-        q.push(0);
+        queue<int>q({0});
+
         visited[0]=1;     // just visited
 
         while(!q.empty()) {
 
-            auto node=q.front();
+            auto node = q.front();
             q.pop();
-            bfs.push_back(node);
+
+            res.push_back(node);
 
             for(auto it:adj[node]) {
                 if(!visited[it]) {
@@ -25,6 +26,6 @@ class Solution {
                 }
             }
         }
-        return bfs;
+         return res;
     }
 };

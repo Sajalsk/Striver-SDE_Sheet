@@ -39,7 +39,7 @@ public:
 
     int reversePairs(vector<int>& nums) {
 
-        if(!nums.size())return 0;
+        if(!nums.size()) return 0;
        
         mergeSort(nums,0,nums.size()-1);
         return count;

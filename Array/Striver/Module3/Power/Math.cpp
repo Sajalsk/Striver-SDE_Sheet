@@ -7,7 +7,7 @@ public:
         double ans=1.0;
         long long m=n;
         
-        if(m<0)  m-1;
+        if(m<0)  m=m*-1;
         
         while(m>0) {
             

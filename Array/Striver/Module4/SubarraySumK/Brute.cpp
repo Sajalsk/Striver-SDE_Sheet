@@ -10,7 +10,7 @@ class Solution{
         if(n==1 && A[0]==0) return 1;
         
         for (int i=0;i<n;i++) {
-            sum=A[i];
+            sum=A[i];                        // write way of subarray
             for (int j=i+1;j<n;j++) {
                 sum+=A[j];
 

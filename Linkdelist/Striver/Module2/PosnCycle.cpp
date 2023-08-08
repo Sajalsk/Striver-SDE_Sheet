@@ -24,7 +24,8 @@ public:
             
             slow = slow->next;
             fast = fast->next->next;
-            if(slow == fast){
+
+            if(slow == fast) {
                 while(slow != head){
                     slow = slow->next;
                     head = head->next;
