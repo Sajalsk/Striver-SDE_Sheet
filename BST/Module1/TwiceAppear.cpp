@@ -1,16 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 template <typename T>
+
 class Node {
 public:
     T data;
     vector<Node *> children;
 
-    Node(T data) {
-        this->data = data;
-    }
+    Node(T data) this->data = data;
+  
     class Solution {
-public:
+    public:
+
     int singleNonDuplicate(vector<int>& nums) {
         
         if(nums.size()==1) return nums[0];

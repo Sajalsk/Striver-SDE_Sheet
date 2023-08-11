@@ -21,7 +21,7 @@ public:
         
         TreeNode* root = new TreeNode(nums[mid]);
 
-        root->left = solve(left , mid-1 ,nums);
+        root->left = solve(left ,  mid-1 , nums);
         root->right= solve(mid+1 , right , nums);
         
         return root;

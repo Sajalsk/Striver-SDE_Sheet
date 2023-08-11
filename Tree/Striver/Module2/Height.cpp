@@ -21,7 +21,7 @@ int main() {
             int cl=maxDepth(root->left);
             int cr=maxDepth(root->right);
             
-            return 1+max(cl,cr);          // 1+ for the root itself
+            return 1+max(cl,cr);          // +1 for the root itself
     }
 
 }

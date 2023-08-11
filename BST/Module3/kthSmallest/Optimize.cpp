@@ -19,7 +19,7 @@ public:
         if(!root)  return -1;
        
         int leftans=kthSmallest(root->left,k);
-        if(leftans!=-1)  return leftans;
+        if(leftans!=-1)  return leftans;         // end of nodes
            
         k--;
         

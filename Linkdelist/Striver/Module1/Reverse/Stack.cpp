@@ -20,18 +20,18 @@ public:
         
         if(head==NULL)return head;
 
-        stack<int> stk;
+        stack<int> st;
         ListNode *curr=head;
 
         while(curr!=NULL) {
-            stk.push(curr->val);
+            st.push(curr->val);
             curr=curr->next;
         }
 
         curr=head;
         while(curr!=NULL) {
-            curr->val=stk.top();
-            stk.pop();
+            curr->val=st.top();
+            st.pop();
             curr=curr->next;
         }
          return head;

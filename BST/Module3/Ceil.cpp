@@ -14,24 +14,23 @@ public:
     class Solution {
         public:
       
+    int CeilInBST(TreeNode<int> * root, int X) {
+    
+    int Ceil=-1;
+    while(root) {
+        
+        if(root->val==X) return root->val;
 
-int findCeil(BinaryTreeNode<int> *TreeNode, int x){
-   
-   int ceil =-1;
-   while(TreeNode) { 
-
-       if(TreeNode->data==x)  return TreeNode->data;
-          
-       if(x<TreeNode->data)  {
-
-         ceil=TreeNode->data;
-         TreeNode=TreeNode->left;
-       }
-          
-       else  TreeNode=TreeNode->right;
-   }
-    return ceil;
+        if(root->val>X) {
+            Ceil=root->val;
+            root=root->left;
+        } 
+         else root=root->right;
+        
+    }
+     return Ceil;
 }
+
  };
 
 };

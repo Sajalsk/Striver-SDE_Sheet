@@ -10,7 +10,7 @@ public:
 
     while (mid <= high) {
         
-        if (nums[mid] == 0) {
+        if (nums[mid] == 0) {                 // !important nums[mid];
             swap(nums[low], nums[mid]);
             low++;
             mid++;

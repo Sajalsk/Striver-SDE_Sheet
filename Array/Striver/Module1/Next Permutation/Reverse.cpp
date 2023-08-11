@@ -7,7 +7,7 @@ public:
         int n= nums.size();
         
         for (int i=n-2;i>=0;i--) {
-           if(nums[i]<nums[i+1]) {
+           if(nums[i]<nums[i+1]) {      // next to it
               for (int j=n-1;j>i;j--) {
                 if(nums[j]>nums[i]) {
                     swap(nums[i],nums[j]);

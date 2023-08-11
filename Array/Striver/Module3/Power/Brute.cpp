@@ -6,7 +6,7 @@ public:
         
         int m=n;
         
-        if(n<0) n=n*-1;
+        if(n<0) m=m*-1;
 
         double ans=1;
 

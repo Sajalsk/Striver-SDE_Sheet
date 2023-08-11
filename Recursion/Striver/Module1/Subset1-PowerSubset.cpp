@@ -4,18 +4,18 @@ using namespace std;
 class Solution {
 public:
     
-  void help(int i,vector<int>& nums,vector<int>ds,vector<vector<int>>& ans,int n) {
+  void help(int index,vector<int>& nums,vector<int>ds,vector<vector<int>>& ans,int n) {
     
-    if(i==n) {
+    if(index==n) {
         ans.push_back(ds);
         return;
     }
     
-    ds.push_back(nums[i]);
-    help(i+1,nums,ds,ans,n);
+    ds.push_back(nums[index]);
+    help(index+1,nums,ds,ans,n);
     
     ds.pop_back();
-    help(i+1,nums,ds,ans,n);
+    help(index+1,nums,ds,ans,n);
           
       }
         

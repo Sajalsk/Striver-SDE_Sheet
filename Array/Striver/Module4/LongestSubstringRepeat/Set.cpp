@@ -16,7 +16,7 @@ public:
                     maxlen= max(maxlen,j-i);
                     break;            
                 }
-                st.insert(s[j]);                
+                 st.insert(s[j]);                
             }
         }
          return maxlen;

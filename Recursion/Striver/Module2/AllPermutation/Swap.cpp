@@ -14,6 +14,7 @@ public:
      for(int i=ind;i<nums.size();i++) {
          swap(nums[i],nums[ind]);
          Solve(ans,nums,ind+1);
+         
          swap(nums[i],nums[ind]);          // backtracking
       } 
     }

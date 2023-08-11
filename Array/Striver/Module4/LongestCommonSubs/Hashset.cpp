@@ -18,6 +18,6 @@ public:
                 count=1;
             }
         }        
-        return max(max1,count);  
+         return max(max1,count);  
     }
 };

@@ -28,6 +28,7 @@ public:
         ans=max(ans,curr);
         return max(lh,rh)+1;
     }
+    
     int diameterOfBinaryTree(TreeNode* root) {
         
         height(root);

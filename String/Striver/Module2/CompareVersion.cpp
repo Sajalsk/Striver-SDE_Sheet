@@ -3,7 +3,7 @@ using namespace std;
 
 class Solution {
 public:
-    int compareVersion(string version1, string version2) {
+    int compareVersion(string version1, string version2) {  
         
         int i=0,j=0;
         
@@ -15,7 +15,7 @@ public:
            int temp1=0;
            int temp2=0;
             
-            while(i<len1 && version1[i]!='.') {
+            while(i<len1 && version1[i]!='.') {   //  version1 = "1.0", version2 = "1.0.0"
                 
                 temp1=temp1*10+ (version1[i]-'0');   // converting into integer
                 i++;

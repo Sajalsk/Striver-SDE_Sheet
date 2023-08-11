@@ -13,7 +13,7 @@ class Solution {
 public:
     bool checkBST(TreeNode* root, TreeNode* curr, TreeNode* temp) {
 
-        if (root == NULL) return true;
+        if (!root NULL) return true;
          
     if ((curr != NULL && root->val <= curr->val) || (temp != NULL && root->val >= temp->val)) return false;
     
@@ -23,7 +23,7 @@ public:
     bool isValidBST(TreeNode* root) {
 
         if (root->left == NULL && root->right == NULL) return true;
-        return checkBST(root, NULL, NULL); 
+        return checkBST(root, root->left , root->right); 
     }
 };
 

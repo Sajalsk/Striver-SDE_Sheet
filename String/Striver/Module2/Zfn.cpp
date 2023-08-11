@@ -8,14 +8,14 @@ public:
         
         int i=0,j=0;
         
-        int h=haystack.length();
+        int h=haystack.length();        //  haystack = "sadbutsad", needle = "sad"  return 0;
         int n=needle.length();
         
         while(i<h  &&  j<n) {
             
             if(haystack[i]==needle[j]) {
-                i++; j++;  
-                
+                i++; 
+                j++;     
             }
             
              else {
@@ -24,7 +24,7 @@ public:
              }  
             
         }  
-         return j==n?i-j:-1;
+         return j==n?i-j:-1;        // if gone to full length();
         
     }
 };

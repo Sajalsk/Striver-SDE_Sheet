@@ -20,6 +20,7 @@ public:
 
         for (int row = start; row < 9; ++row) {
           for (int col = 0; col < 9; ++col) {
+
             if (board[row][col] == '.') {
               for (char c = '1'; c <= '9'; ++c) {     // checking for all the values;
                 if (isvalid(board, c, row, col)) {
@@ -29,7 +30,7 @@ public:
                     return true; // All enteries are filled and reached at last
                     else
                     board[row][col] = '.';
-                        }
+                }
                     }
                     return false;
                 }

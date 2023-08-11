@@ -20,7 +20,6 @@ public:
        // Worst case might be nlog(n) 
         sort(nums.begin() + low, nums.begin() + high + 1);
         return;
-        
     }
         
     void mergeSort(vector<int>& nums, int low, int high) {

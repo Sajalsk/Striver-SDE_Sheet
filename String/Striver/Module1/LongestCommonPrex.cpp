@@ -8,11 +8,11 @@ public:
         
         string ans="";
        
-        for (int i=0;i<strs[0].length();i++) {
-            char ch = strs[0][i];
+        for (int i=0;i<strs[0].length();i++) {      // ["flower","flow","flight"]  ans = fl 
+            char ch = strs[0][i];                   // traversing in the word only
             bool match = true;
             for (int j=1;j<strs.size();j++) {
-                if(ch!=strs[j][i] || strs[j].size() < i) {
+                if(ch!=strs[j][i] || strs[j].size() < i) {     // j-i   jth word ith colmn
                     match = false;
                     break;
                 }  

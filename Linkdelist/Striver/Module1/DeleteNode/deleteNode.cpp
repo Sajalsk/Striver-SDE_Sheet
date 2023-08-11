@@ -3,23 +3,20 @@ using namespace std;
 
 template <typename T>
 
-class ListNode
-{
+class ListNode {
 
     int data;
     ListNode *next;
 
-    ListNode(int data)
-    {
+    ListNode(int data) {
         this->data = data;
         next = NULL;
     }
 
-    class Solution
-    {
+    class Solution {
     public:
-        void deleteNode(ListNode *node)
-        {
+
+        void deleteNode(ListNode *node) {
             node->val = node->next->val;
             node->next = node->next->next;
         }

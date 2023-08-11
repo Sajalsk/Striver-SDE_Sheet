@@ -21,13 +21,15 @@ public:
 
         Node* temp=current;
         while(!current) { 
+
           current->left->next=current->right;
           current->right->next=current->next==NULL?NULL: current->next->left;
           current=current->next;
+          
           }
             current=temp->left;
         }
-        return root;
+         return root;
         
     }
 };

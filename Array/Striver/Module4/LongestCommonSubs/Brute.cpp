@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 class Solution {
 public:
     int longestConsecutive(vector<int>& nums) {
@@ -20,10 +21,6 @@ public:
             }
         }
           max1=max(max1,count); // for last index
-
-        return max1;
-       
-        
+          return max1;  
     }
-
 };

@@ -24,8 +24,7 @@ public:
                     k--;
                 } 
                 else if (sum < 0)   j++;
-                else if(sum>0) k--;
-                   
+                else if(sum>0) k--;    
             }
         }
         

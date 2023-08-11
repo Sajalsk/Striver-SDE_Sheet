@@ -10,7 +10,7 @@ public:
         vector<int>l(n);
         vector<int>r(n);
         
-        l[0]=height[0];
+        l[0]  =height[0];
         r[n-1]=height[n-1];
         
         for(int i=1;i<n;i++)     l[i]=max(l[i-1],height[i]);
