@@ -15,7 +15,9 @@ class Solution {
     public:
 
     int floorInBST(TreeNode<int> * root, int X) {
+
     int floor=-1;
+    
     while(root) {
         
         if(root->val==X) return root->val;

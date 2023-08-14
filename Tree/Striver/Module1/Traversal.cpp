@@ -8,15 +8,16 @@ class TreeNode {
     T data;
     vector <TreeNode*> children;
     
-    TreeNode(T data)
-    {
+    TreeNode(T data){
         this->data=data;
     }
 
 // Inorder
+
 class Solution {
 public:
-     vector<int>res;
+    
+    vector<int>res;
     vector<int> inorderTraversal(TreeNode* root) {
         
         if(root==NULL) return res;

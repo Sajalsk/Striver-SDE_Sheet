@@ -12,13 +12,14 @@ class TreeNode {
         this->data=data;
     }
 
-
 class Solution {
 public:
-    vector<int> inorderTraversal(TreeNode* root) {
+      vector<int> inorderTraversal(TreeNode* root) {
+
        vector < int > inorder;
 
-  TreeNode * cur = root;
+       TreeNode * cur = root;
+
   while (cur != NULL) {
 
     if (cur -> left == NULL) {
@@ -40,7 +41,7 @@ public:
       }
     }
   }
-  return inorder;
+   return inorder;
     }
 };
 };

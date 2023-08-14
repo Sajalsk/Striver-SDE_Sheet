@@ -19,14 +19,15 @@ public:
      int height(TreeNode* root) {
          
         if(!root) return 0;
-
-        int lh=height(root->left);
-        int rh=height(root->right);
+        int lh=0,rh=0;
+        
+        lh+=Solve(root->left);
+        rh+=Solve(root->right);
          
         curr=lh+rh;
          
         ans=max(ans,curr);
-        return max(lh,rh)+1;
+        return 1+max(lh,rh);
     }
     
     int diameterOfBinaryTree(TreeNode* root) {

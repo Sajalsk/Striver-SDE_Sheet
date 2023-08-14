@@ -7,8 +7,7 @@ class TreeNode {
     T data;
     vector <TreeNode*> children;
     
-    TreeNode(T data)
-    {
+    TreeNode(T data) {
         this->data=data;
     }
 
@@ -27,6 +26,7 @@ void solve(Node* root,vector<int>& arr,int len) {
     vector<int> leftView(Node* root) {
         
         vector<int> arr;
+        
         solve(root,arr,0);
         return arr;
     }

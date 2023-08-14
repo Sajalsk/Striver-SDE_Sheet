@@ -13,13 +13,14 @@ class Solution {
     v.push_back(-1);
     s.push(nums[0]);
     
-    for(int i = 1;i<n;i++) {
+    for(int i=1;i<n;i++) {
         
         while(s.size()!=0 && nums[i]<=s.top()) {
             s.pop();
         }
         
-        (s.empty()) ? v.push_back(-1):v.push_back(s.top());
+        int val=(s.empty())?-1:s.top();
+        v.push_back(val);
 
     }
      return v;

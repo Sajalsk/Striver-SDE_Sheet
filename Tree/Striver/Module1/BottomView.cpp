@@ -13,7 +13,6 @@ class TreeNode {
         this->data=data;
     }
 
-
 class Solution {
   public:
     vector <int> bottomView(Node *root) {
@@ -34,6 +33,7 @@ class Solution {
             TreeNode* node = it.first;   // node=2 line=0;
             int line = it.second; 
 
+           
             mpp[line] = node->data;   // 0,2   // overwritten
             
             if(node->left != NULL)   q.push({node->left, line-1}); 

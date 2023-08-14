@@ -28,6 +28,7 @@ public:
     int kthSmallest(TreeNode* root, int k) {
        
         solve(root);
+        
         sort(res.begin(),res.end());
         
         return res[k-1];

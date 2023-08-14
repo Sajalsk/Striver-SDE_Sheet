@@ -18,7 +18,7 @@ public:
             
         }
         
-        for(int i=n-1;i>=0;i--)  {        // for circular
+        for(int i=n-1;i>=0;i--)  {                    // for Circular
              while(!s.empty() && nums[i]>=s.top()) 
                 s.pop();
             

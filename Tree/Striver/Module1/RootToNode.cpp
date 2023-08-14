@@ -2,38 +2,34 @@
 using namespace std;
 
 template <typename T>
+
 class TreeNode {
-    public:
-    
+public:
     T data;
-    vector <TreeNode*> children;
-    
+    vector<TreeNode *> children;
+
     TreeNode(T data) {
-        this->data=data;
+        this->data = data;
     }
 
-void solve(TreeNode<int> *root, int x,vector<int>&arr) {
+    void solve(BinaryTreeNode<int> *root, vector<string> &ans, string res) {
 
-    if(!root) return;
-    arr.push_back(root->data);
+        if (root->left == NULL && root->right == NULL) {
+            ans.push_back(res);
+            return;
+        }
 
-    if(root->data==x) return;
+        if (root->left)  solve(root->left, ans, res + " " + to_string(root->left->data));
+        if (root->right) solve(root->right, ans, res + " " + to_string(root->right->data));      
+    }
 
-    solve(root->left,x,arr);
-    solve(root->right,x,arr);
+    vector<string> allRootToLeaf(BinaryTreeNode<int> *root) {
 
-    if(arr[arr.size()-1]!=x)           // bcz lastly filled with arr.push_back(root->data);
-    arr.pop_back();
+        vector<string> ans;
 
-}
+        if (root == NULL)  return ans;
 
-vector<int> pathInATree(TreeNode<int> *root, int x) {
-
-    if(!root) return {};
-
-    vector<int>arr;
-    solve(root,x,arr);
-
-    return arr;
-}
+        solve(root, ans, to_string(root->data));
+        return ans;
+    };
 };

@@ -17,7 +17,7 @@ public:
             st.pop();
         }
 
-        l[i]=(st.empty())?0:st.top()+1;
+        r[i]=(st.empty())?0:st.top()+1;
         st.push(i);
        }
 
@@ -28,13 +28,13 @@ public:
             st.pop();
         }
 
-        r[i]=(st.empty())?n-1:st.top()-1;
+        l[i]=(st.empty())?n-1:st.top()-1;
         st.push(i);
        }
 
       int maxA = 0;
       for (int i = 0; i < n; i++) {
-        maxA = max(maxA, heights[i] * (r[i] - l[i] + 1));
+        maxA = max(maxA, heights[i] * (l[i] - r[i] + 1));
       }
         
       return maxA;

@@ -23,8 +23,7 @@ public:
         sort(res.begin(),res.end());
         int mid= (n-1)/2;
         
-     return   (n%2==0) ? double (res[mid]+ res[mid+1])/2 : double (res[mid]);  
-        
+     return   (n%2==0) ? double (res[mid]+ res[mid+1])/2 : double (res[mid]);    
     }
 };
 

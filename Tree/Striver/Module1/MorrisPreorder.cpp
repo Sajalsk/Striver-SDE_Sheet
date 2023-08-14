@@ -8,22 +8,20 @@ class TreeNode {
     T data;
     vector <TreeNode*> children;
     
-    TreeNode(T data)
-    {
+    TreeNode(T data) {
         this->data=data;
     }
 
-
 class Solution {
 public:
-    vector<int> inorderTraversal(TreeNode* root) {
-       vector < int > inorder;
+    vector<int> preorderTraversal(TreeNode* root) {
+       vector < int > preorder;
 
   TreeNode * cur = root;
   while (cur != NULL) {
 
     if (cur -> left == NULL) {
-      inorder.push_back(cur -> val);
+      preorder.push_back(cur -> val);
       cur = cur -> right;
     } else {
       TreeNode * prev = cur -> left;
@@ -33,7 +31,7 @@ public:
 
       if (prev -> right == NULL) {     // make a thread bw right and curr;
         prev -> right = cur;
-        inorder.push_back(cur -> val);          // Change in insertion for value in preorder
+        preorder.push_back(cur -> val);          // Change in insertion for value in preorder
         cur = cur -> left;
       } else {               // right is already pointing to the curr so unthread it.
         prev -> right = NULL;
@@ -41,7 +39,7 @@ public:
       }
     }
   }
-  return inorder;
+  return preorder;
     }
 };
 };

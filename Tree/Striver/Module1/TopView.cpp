@@ -2,20 +2,19 @@
 using namespace std;
 
 template <typename T>
-class TreeNode {
+class Node {
     public:
     
     T data;
-    vector <TreeNode*> children;
+    vector <Node*> children;
     
-    TreeNode(T data) {
+    Node(T data) {
         this->data=data;
     }
 
 class Solution {
     public:
-    //Function to return a list of nodes visible from the top view 
-    //from left to right in Binary Tree.
+   
     vector<int> topView(Node *root) {
        vector<int> ans; 
 
@@ -31,7 +30,7 @@ class Solution {
             auto it = q.front();       // Imp Line
             q.pop(); 
 
-            TreeNode* node = it.first; 
+            Node* node = it.first; 
             int line = it.second; 
 
             if(mpp.find(line) == mpp.end()) mpp[line] = node->data;   // change from bottom view

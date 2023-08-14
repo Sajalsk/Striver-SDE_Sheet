@@ -8,8 +8,7 @@ class TreeNode {
     T data;
     vector <TreeNode*> children;
     
-    TreeNode(T data)
-    {
+    TreeNode(T data) {
         this->data=data;
     }
 
@@ -18,9 +17,9 @@ public:
       vector<vector<int>> levelOrder(TreeNode* root) {
         
         vector<vector<int>> level;
-        if(root==NULL) return level;
+        if(!root) return level;
     
-        queue<TreeNode *> q({root});
+        queue<TreeNode*> q({root});
         
          while(!q.empty()) {
             

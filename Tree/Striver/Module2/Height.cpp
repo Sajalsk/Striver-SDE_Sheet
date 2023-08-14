@@ -12,18 +12,21 @@ class TreeNode {
         this->data=data;
     }
 
-int main() {
     
-     int maxDepth(TreeNode* root) {
+     class Solution {
+     public:
+
+    int maxDepth(TreeNode* root) {
         
-            if(root==NULL) return 0;
-
-            int cl=maxDepth(root->left);
-            int cr=maxDepth(root->right);
-            
-            return 1+max(cl,cr);          // +1 for the root itself
+        if(!root) return 0;
+        
+        int lh=0,rh=0; 
+        
+         lh +=   maxDepth(root->left);
+         rh +=   maxDepth(root->right);
+        
+        return 1+max(lh,rh);
     }
-
-}
+};
 
 };

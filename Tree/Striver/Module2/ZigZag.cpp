@@ -41,12 +41,11 @@ class TreeNode{
                 if(node->right != NULL) q.push(node->right);
 
                 v.push_back(node->val);
-               
             }
              ans.push_back(v);
         }
 
-   for(int i=0;i<ans.size();i++){
+   for(int i=0;i<ans.size();i++) {
 
       if(i%2!=0) {
           reverse(ans[i].begin(),ans[i].end());
