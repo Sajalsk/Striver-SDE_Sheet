@@ -12,8 +12,10 @@ class ListNode {
         this->data=data;
         next=NULL;
     }
+
 class Solution {
 public:
+
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         
         ListNode *p= l1;
@@ -36,15 +38,13 @@ public:
             curr = curr->next;
             
             if(p !=NULL) p=p->next;
-            if(q !=NULL) q=q->next;
-            
+            if(q !=NULL) q=q->next;   
         }
         
         if(carry>0) {
             curr->next = new ListNode (carry);
-        }
-        
-        return ans->next;
+        } 
+         return ans->next;
         
     }
 };

@@ -3,6 +3,7 @@ using namespace std;
 
 class Solution {
 public:
+
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
         
     if (intervals.empty()) return {};
@@ -17,6 +18,6 @@ public:
             res.back()[1] = max(res.back()[1], intervals[i][1]); //overlap, update end
         }
     }   
-    return res;    
+     return res;    
     }
 };

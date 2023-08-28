@@ -3,6 +3,7 @@ using namespace  std;
 
 class Solution {
 public:
+
     int trap(vector<int>& height) {
         
         int ans=0,n=height.size();

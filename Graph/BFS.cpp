@@ -21,8 +21,8 @@ class Solution {
 
             for(auto it:adj[node]) {
                 if(!visited[it]) {
-                    q.push(it);
                     visited[it]=1;
+                    q.push(it);   
                 }
             }
         }

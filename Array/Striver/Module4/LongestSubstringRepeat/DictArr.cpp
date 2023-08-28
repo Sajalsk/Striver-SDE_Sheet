@@ -19,7 +19,6 @@ public:
            dict[s[i]]=i;
            maxlen=max(maxlen,i-start);
        }
-        
         return maxlen;
     }
 };

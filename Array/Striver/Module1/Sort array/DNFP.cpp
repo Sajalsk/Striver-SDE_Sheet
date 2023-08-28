@@ -3,6 +3,7 @@ using namespace std;
 
 class Solution {
 public:
+
     void sortColors(vector<int>& nums) {
         
         int n=nums.size();
@@ -22,7 +23,6 @@ public:
             swap(nums[mid], nums[high]);
             high--;
         }
-    }
-        
+      }    
     }
 };

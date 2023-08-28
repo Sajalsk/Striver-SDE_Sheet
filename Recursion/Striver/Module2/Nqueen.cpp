@@ -1,15 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 class Solution {
-  public:
+public:
+
     bool isSafe1(int row, int col, vector < string > board, int n) {
       
-      int cR = row;                     // Starting   for preserving the original values used in while loop
+      int cR = row;                     // Starting for preserving the original values used in while loop
       int cC = col;
 
       while (row >= 0 && col >= 0) {   // starting from last of board
       
-        if (board[row][col] == 'Q')    // check upper left diagonal    (UL)
+        if (board[row][col] == 'Q')    // check upper left diagonal       (UL)
           return false;
         row--;
         col--;
@@ -19,7 +21,7 @@ class Solution {
       col = cC;
       
       while (col >= 0) {
-        if (board[row][col] == 'Q')   // check left side        (L)
+        if (board[row][col] == 'Q')   // check left side                  (L)
           return false;
         col--;
       }

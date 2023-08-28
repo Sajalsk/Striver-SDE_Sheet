@@ -3,6 +3,7 @@ using namespace std;
 
 class Solution {
 public:
+
     int compareVersion(string version1, string version2) {  
         
         int i=0,j=0;
@@ -27,7 +28,7 @@ public:
                 j++;   
             }
             
-            if(temp1<temp2) return -1;
+            if(temp1<temp2)      return -1;
             else if(temp1>temp2) return 1;
             
             i++;

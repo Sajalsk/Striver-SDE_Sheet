@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 class Solution {
 public:
     
@@ -7,6 +8,7 @@ public:
         
         if(i==(m-1)&&j==(n-1)) return 1;
         if(i>=m||j>=n) return 0;
+
         else return countPaths(i+1,j,m,n)+countPaths(i,j+1,m,n);
     }
     

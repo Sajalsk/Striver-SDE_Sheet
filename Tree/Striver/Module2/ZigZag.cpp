@@ -47,9 +47,7 @@ class TreeNode{
 
    for(int i=0;i<ans.size();i++) {
 
-      if(i%2!=0) {
-          reverse(ans[i].begin(),ans[i].end());
-      }
+    if(i%2!=0) reverse(ans[i].begin(),ans[i].end());
    }
         return ans;
     }

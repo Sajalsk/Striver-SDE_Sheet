@@ -8,9 +8,5 @@ public:
         for(int j=0;j<n;j++)  nums1[m++] = nums2[j];  
        
         sort(nums1.begin(),nums1.end());
-    }
-        
-        
-        
-    
+    }  
 };

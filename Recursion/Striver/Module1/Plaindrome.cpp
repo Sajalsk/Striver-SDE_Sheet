@@ -3,6 +3,7 @@ using namespace std;
 
 class Solution {
 public:
+
     bool issafe(int st,int e,string s){   //start,end 
 
         while(st<=e) {
@@ -32,7 +33,7 @@ public:
 
     vector<vector<string>> partition(string s) {
         
-        vector<vector<string>>ans;
+        vector<vector<string>>ans;                     // string
         vector<string>ds;
         
         help(ds,ans,s,0);

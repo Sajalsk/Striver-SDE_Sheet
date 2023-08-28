@@ -9,19 +9,15 @@ public:
         
         vector<int>ans;
         int n=nums.size(),k=0,a;
-        int i=0;
-        for (int i=0;i<n;i++) {
-             mpp[nums[i]]++;
-        }
-       
-        
+
+        for (int i=0;i<n;i++)  mpp[nums[i]]++;
+            
         for (auto it:mpp) {
             if(it.second>n/3) {
               ans.push_back(it.first);
                
             }
         }
-        
-        return ans;
+         return ans;
     }
 };

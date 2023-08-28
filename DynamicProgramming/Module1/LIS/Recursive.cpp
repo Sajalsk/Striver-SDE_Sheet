@@ -1,9 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 class Solution {
 public:
     
-    int help(int curr,int prev,vector<int>&nums,int n) {
+    int help(int curr,int prev,vector<int>&nums,int n) {  // nums = [10,9,2,5,3,7,101,18]
         
         if(curr==n) return 0;
     
@@ -17,6 +18,7 @@ public:
     }
     
     int lengthOfLIS(vector<int>& nums) {
+
         int n=nums.size();
         
       return help(0,-1,nums,n);

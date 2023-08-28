@@ -3,8 +3,10 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+
 class Solution {
 public:
+
     int strStr(string haystack, string needle) {      //  haystack = "sadbutsad", needle = "sad"  return 0;
          
         if(haystack.length() < needle.length()) return -1;

@@ -9,6 +9,7 @@ public:
         int count=1,max1=1;
         
         if(n==0) return 0;
+        
         sort(nums.begin(),nums.end());
         unique(nums.begin(),nums.end());
      

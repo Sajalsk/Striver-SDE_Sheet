@@ -13,8 +13,9 @@ class ListNode {
         next=NULL;
     }
 
-    class Solution {
+class Solution {
 public:
+
     ListNode *detectCycle(ListNode *head) {
         
         ListNode *fast = head;

@@ -12,8 +12,10 @@ class ListNode {
         this->data=data;
         next=NULL;
     }
-    class Solution {
+
+class Solution {
 public:
+
     bool hasCycle(ListNode *head) {
         
         if(head==NULL || head->next==NULL)  return false;

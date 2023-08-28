@@ -37,9 +37,7 @@ public:
     vector<int>res;
     vector<int> preorderTraversal(TreeNode* root) {
         
-        if(root==NULL) {
-            return res;
-        }
+        if(root==NULL) return res;
         
         res.push_back(root->val);
         preorderTraversal(root->left);
@@ -58,10 +56,8 @@ public:
    
     TreeNode <int>* postorderTraversal(TreeNode* root) {
         
-        if(root==NULL) {
-            return postorder;
-        }
-        
+        if(root==NULL)  return postorder;
+      
         postorderTraversal(root->left);
         postorderTraversal(root->right);
         postorder.push_back(root->val);

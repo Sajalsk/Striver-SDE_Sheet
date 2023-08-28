@@ -11,10 +11,10 @@ public:
          return;
      }
      
-     for(int i=ind;i<nums.size();i++) {
+     for(int i=ind;i<nums.size();i++) {     // index
+
          swap(nums[i],nums[ind]);
          Solve(ans,nums,ind+1);
-         
          swap(nums[i],nums[ind]);          // backtracking
       } 
     }

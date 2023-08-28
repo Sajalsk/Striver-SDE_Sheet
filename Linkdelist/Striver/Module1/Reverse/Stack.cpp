@@ -13,9 +13,9 @@ class ListNode {
         next=NULL;
     }
 
-
 class Solution {
 public:
+
     ListNode* reverseList(ListNode* head) {
         
         if(head==NULL)return head;

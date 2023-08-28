@@ -13,7 +13,7 @@ class ListNode {
         next=NULL;
     }
 
-class Solution {
+    class Solution {
     public :
 
     ListNode*Reverse(ListNode *head) {
@@ -23,13 +23,13 @@ class Solution {
     ListNode*temp=NULL;
 
     while(curr) {
+
         temp=curr->next;
         curr->next=prev;
         prev=curr;
         curr=temp;
     }
-
-      return prev;
+     return prev;
     }
 };
 

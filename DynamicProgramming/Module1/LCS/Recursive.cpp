@@ -10,8 +10,7 @@ public:
            
         if(text1[i]==text2[j]) return 1+help( i-1,j-1,text1,text2);
         
-       return max(help(i-1,j,text1,text2),help(i,j-1,text1,text2));
-                        
+       return max(help(i-1,j,text1,text2),help(i,j-1,text1,text2));                   
     }
     
     int longestCommonSubsequence(string text1, string text2) {
@@ -19,8 +18,6 @@ public:
         int i=text1.length()-1;
         int j=text2.length()-1;
         
-        return help(i,j,text1,text2);
-        
-        
+        return help(i,j,text1,text2);   
     }
 };
