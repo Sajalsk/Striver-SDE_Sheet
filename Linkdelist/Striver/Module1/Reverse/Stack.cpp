@@ -18,7 +18,7 @@ public:
 
     ListNode* reverseList(ListNode* head) {
         
-        if(head==NULL)return head;
+        if(head==NULL) return head;
 
         stack<int> st;
         ListNode *curr=head;
@@ -29,6 +29,7 @@ public:
         }
 
         curr=head;
+        
         while(curr!=NULL) {
             curr->val=st.top();
             st.pop();

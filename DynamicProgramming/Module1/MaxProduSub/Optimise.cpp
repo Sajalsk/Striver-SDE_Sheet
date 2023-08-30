@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 class Solution {
 public:
     int maxProduct(vector<int>& nums) {
@@ -11,7 +12,7 @@ public:
             curr=curr*=nums[i];
             max1=max(max1,curr);
             if(curr==0) curr=1;
-            }
+        }
         
         curr=1;
     

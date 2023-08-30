@@ -14,7 +14,7 @@ public:
             else st.pop();
             
             else if(s[i]=='}')  if(st.top()!='{') return false;
-             else st.pop();
+            else st.pop();
             
             else if(s[i]==']')  if(st.top()!='[') return false;
             else st.pop();

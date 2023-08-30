@@ -8,7 +8,7 @@ public:
         
        if(n==0 || W==0 ) return 0;
 
-       if(wt[n-1]>W) return knapSack(W,wt,val,n-1);  // staring from back
+       if(wt[n-1]>W) return knapSack(W,wt,val,n-1);  // staring from back & not taken
       
       else 
        return max(val[n-1]+knapSack(W-wt[n-1],wt,val,n-1),knapSack(W,wt,val,n-1)); // if allowed taken not taken  

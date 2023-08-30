@@ -2,11 +2,11 @@
 using namespace std;
 
 class Solution {
-     public:
+public:
     
 bool solve(int index,int target, vector<int>&nums, int N,int sum) {
         
-        if(index>=N)   return false ;
+        if(index>=N)   return false;
         if(sum>target) return false;
         
         if(sum==target) return true;

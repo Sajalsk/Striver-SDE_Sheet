@@ -12,7 +12,7 @@ public:
       while (row >= 0 && col >= 0) {   // starting from last of board
       
         if (board[row][col] == 'Q')    // check upper left diagonal       (UL)
-          return false;
+        return false;
         row--;
         col--;
       }
@@ -22,7 +22,7 @@ public:
       
       while (col >= 0) {
         if (board[row][col] == 'Q')   // check left side                  (L)
-          return false;
+        return false;
         col--;
       }
   
@@ -31,12 +31,13 @@ public:
 
       while (row < n && col >= 0) {
         if (board[row][col] == 'Q')   // check lower left diagonal        (LL)
-          return false;
+        return false;
         row++;
         col--;
       }
 
       return true;                   // main thing to return 
+
     }
 
     void solve(int col, vector < string > & board, vector < vector < string >> & ans, int n) {
@@ -47,7 +48,9 @@ public:
       }
 
       for (int row = 0; row < n; row++) {
+
         if (isSafe1(row, col, board, n)) {
+          
           board[row][col] = 'Q';
           solve(col + 1, board, ans, n);        // Next
          

@@ -9,9 +9,11 @@ using namespace std;
         stack.push(temp);        
         return;    
     }   
-     else {       
+     else { 
+
         int temp2 = stack.top();        
-        stack.pop();        
+        stack.pop(); 
+               
         insert(stack, temp);        
         stack.push(temp2);    
     }

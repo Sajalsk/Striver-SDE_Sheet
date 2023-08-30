@@ -22,9 +22,11 @@ class ListNode {
         if (head == NULL || k == 1) return head;
 
         //step 1: reverse first k Nodes          // 1 2 3 4 5 6  - 2 (1&2)
+
         ListNode* curr = head;
         ListNode* temp = NULL;
         ListNode* prev = NULL;
+        
         int count = 0;
 
         while (curr != NULL && count < k) {

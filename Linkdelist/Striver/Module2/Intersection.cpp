@@ -30,7 +30,6 @@ class ListNode {
             slow=slow==NULL?headA:slow->next; 
         }
          return NULL;
-
-    }
+      }
     }
 };

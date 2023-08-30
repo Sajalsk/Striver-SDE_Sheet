@@ -16,23 +16,23 @@ class ListNode {
    class Solution {
    public:
 
-    ListNode* rotateRight(ListNode* head, int k) {
+    ListNode* rotateRight(ListNode* head, int k) {   //  1,2,3,4,5   : k=12
         
-        if(head==NULL || head->next==NULL || k==0)  return head;
+        if(head==NULL || head->next==NULL || k==0)  return head; 
       
         int len=1;
         ListNode *curr = head;
         
         while(curr->next!=NULL) {
-           
-            curr=curr->next;
-             len++;
+            
+            len++;
+            curr=curr->next; 
         }
         
-        curr->next=head;
+        curr->next=head;                            // len = 5;
         
-        k=k%len;
-        k = len-k;
+        k=k%len;     // rewriting k for non - repitition k =2
+        k = len-k;                 // k = 3
         
         while(k--)  curr=curr->next;
           

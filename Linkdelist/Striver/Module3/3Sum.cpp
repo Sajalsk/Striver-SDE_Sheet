@@ -9,7 +9,7 @@ public:
         set<vector<int>> s;
         vector<vector<int>> res;
         
-        for (int i=0;i<nums.size();i++) {
+        for (int i=0 ; i<nums.size();i++) {
             
             int j = i + 1;
             int k = nums.size() - 1;
@@ -28,9 +28,8 @@ public:
             }
         }
         
-        for(auto it : s)
-            res.push_back(it);
-        
+        for(auto it : s)   res.push_back(it);
+             
         return res;
     }
 };

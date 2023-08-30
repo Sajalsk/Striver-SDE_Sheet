@@ -1,16 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 class Solution {
 public:
     
-    int help(int i,int j,string word1,string word2) {
+    int Solve(int i,int j,string word1,string word2) {
         
         if(i<0) return j+1;
         if(j<0) return i+1;
         
-        if(word1[i]==word2[j]) return help(i-1,j-1,word1,word2);
+        if(word1[i]==word2[j]) return Solve(i-1,j-1,word1,word2);
         
-      return 1+min ( help(i-1,j,word1,word2), min( help(i,j-1,word1,word2),help(i-1,j-1,word1,word2)));
+      return 1+min ( Solve(i-1,j,word1,word2), min( Solve(i,j-1,word1,word2),Solve(i-1,j-1,word1,word2)));
     }
     
     int minDistance(string word1, string word2) {
@@ -18,6 +19,6 @@ public:
         int n=word1.length()-1;
         int m=word2.length()-1;
         
-       return  help(n,m,word1,word2);
+       return  Solve(n,m,word1,word2);
     }
 };

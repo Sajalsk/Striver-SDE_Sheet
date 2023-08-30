@@ -30,6 +30,7 @@ public:
             
             int x = (p!=NULL) ? p->val : 0;
             int y = (q!=NULL) ? q->val : 0;
+            
             int sum=x+y+carry;
             
             carry = sum/10;
