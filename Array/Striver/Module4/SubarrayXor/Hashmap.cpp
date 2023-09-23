@@ -1,6 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
+class Solution {
+public :
+
 int subarraysXor(vector<int> &arr, int k) {
 
     int count=0;
@@ -14,8 +18,10 @@ int subarraysXor(vector<int> &arr, int k) {
           int curr=xorr^k;                 // then 4^6=2.
 
           count+=mpp[curr]; // Increasing the value of count with total no.of occurence if that present   Simultaneoulsy
-          mpp[xorr]++;           // // Increasing the value of no. of occurence of xorr
+          mpp[xorr]++;           // Increasing the value of no. of occurence of xorr
     }
      return count;
+
 }
+};
 

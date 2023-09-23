@@ -12,7 +12,7 @@ public:
     }
 
 class Solution {
-    public:
+public:
     
     vector<int>res;
     void solve(TreeNode*root) {

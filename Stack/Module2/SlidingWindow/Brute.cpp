@@ -3,6 +3,7 @@ using namespace std;
 
 class Solution {
 public:
+
     vector<int> maxSlidingWindow(vector<int>& nums, int k) {
 
         vector<int> ans;
@@ -15,6 +16,6 @@ public:
             }
              ans.push_back(mx);
         }
-        return ans;
+         return ans;
     }
 };

@@ -11,15 +11,16 @@ public:
         this->data = data;
     }
 
-    class Solution {
+class Solution {
 public:
+
     int findKthLargest(vector<int>& nums, int k) {
          if(!root)  return -1;
        
-       int rightans=findKthLargest(root->right,K); 
-        return rightans;
+       int rightans=findKthLargest(root->right,k); 
+       return rightans;
         
-         k--;
+        k--;
         
         if(k==0)  return root->val;
 

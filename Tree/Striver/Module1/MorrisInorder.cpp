@@ -14,10 +14,10 @@ class TreeNode {
 
 class Solution {
 public:
+
       vector<int> inorderTraversal(TreeNode* root) {
 
        vector < int > inorder;
-
        TreeNode * cur = root;
 
   while (cur != NULL) {
@@ -31,10 +31,10 @@ public:
         prev = prev -> right;
       }
 
-      if (prev -> right == NULL) {     // make a thread bw right and curr;
+      if (prev -> right == NULL) {     // make a thread bw right and make curr to the left;
         prev -> right = cur;
         cur = cur -> left;
-      } else {               // right is already pointing to the curr so unthread it.
+      } else {                        // right is already pointing to the curr so unthread it.
         prev -> right = NULL;
         inorder.push_back(cur -> val);
         cur = cur -> right;

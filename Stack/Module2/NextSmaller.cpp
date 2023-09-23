@@ -21,6 +21,6 @@ public:
         int val=(s.empty())?-1:s.top();
         res.push_back(val);
     }
-      return res;
+     return res;
  }
 };

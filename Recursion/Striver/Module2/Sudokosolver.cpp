@@ -3,6 +3,7 @@ using namespace std;
 
 class Solution {
 public:
+
     bool isvalid(vector<vector<char>> &board, char c, int row, int col) {
         
         for (int i = 0; i < 9; i++) {
@@ -22,7 +23,7 @@ public:
           for (int col = 0; col < 9;col++) {
 
             if (board[row][col] == '.') {
-              for (char c = '1'; c <= '9'; ++c) {     // checking for all the values;
+              for (char c = '1'; c <= '9';c++) {     // checking for all the values;
                 if (isvalid(board, c, row, col)) {
                    board[row][col] = c;
                    
@@ -36,8 +37,7 @@ public:
                 }
             }
         }
-
-        return true;
+         return true;
     }
 
     void solveSudoku(vector<vector<char>> &board) {

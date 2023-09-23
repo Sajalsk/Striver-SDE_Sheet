@@ -26,7 +26,7 @@ public:
         return;
       
     }
- int  mergeSort(vector<int>& arr, int start, int end) {
+ void  mergeSort(vector<int>& arr, int start, int end) {
 
         if(start == end) return;
         
@@ -36,29 +36,12 @@ public:
         mergeSort(arr,mid+1,end);
         
         checkCount(arr,start,mid,end);
-        return;
-
-         
-    // Not working Solution  
     }
-
+       // Not working Solution  
 int getInversions(vector<int>&arr, int n){
 
-    return mergeSort(arr,0,n-1);
+     mergeSort(arr,0,n-1);
+     return count;
 }
 
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-

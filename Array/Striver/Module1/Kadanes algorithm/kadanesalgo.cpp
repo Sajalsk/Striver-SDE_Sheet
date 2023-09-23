@@ -3,6 +3,7 @@ using namespace std;
 
 class Solution {
 public:
+
     int maxSubArray(vector<int>& nums) {
         
         int sum=0,maxsum=nums[0];

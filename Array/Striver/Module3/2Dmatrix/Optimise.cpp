@@ -1,7 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 class Solution {
 public:
+
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
         
         int n=matrix.size();
@@ -11,7 +13,7 @@ public:
         
         while(low<=high) {
             
-            int mid = (low+(high-low)/2);
+            int mid =(low+high)/2;
             
             if(matrix[mid/m][mid%m]==target) return true;
             else  if(matrix[mid/m][mid%m]<target)  low = mid+1;

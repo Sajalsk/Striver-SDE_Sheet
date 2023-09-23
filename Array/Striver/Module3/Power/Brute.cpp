@@ -1,7 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 class Solution {
 public:
+
     double myPow(double x, int n) {
         
         int m=n;
@@ -12,7 +14,7 @@ public:
 
         for (int i=1;i<=n;i++)  ans=ans*x;
        
-       if(m<0) return 1/ans;
+        if(m<0) return 1/ans;
    
         return ans;
     }

@@ -3,6 +3,7 @@ using namespace std;
 
 class Solution {
 public:
+
     int count=0;
    
     void checkCount(vector<int>& nums, int low, int mid, int high){

@@ -1,7 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 class Solution {
 public:
+
   int helper(int i, int j, vector<int> &cuts,  vector<vector<int>> &dp){
     
     if(i>j) return 0;
@@ -9,8 +11,8 @@ public:
     
     int minm = INT_MAX;
     
-    for(int ind=i; ind<=j; ind++){
-           int cost = cuts[j+1] - cuts[i-1] +  helper(i,ind-1,cuts,dp)+helper(ind+1,j,cuts, dp);                                                         
+    for(int ind=i; ind<=j; ind++) {
+            int cost = cuts[j+1] - cuts[i-1] +  helper(i,ind-1,cuts,dp)+helper(ind+1,j,cuts,dp);                                                   
         
         minm = min(minm, cost);  
     }
@@ -28,3 +30,5 @@ public:
          return helper(1,c,cuts,dp);
     }
 };
+
+              

@@ -2,7 +2,7 @@
 using namespace std;
 
 class Solution {
-    public:
+public:
 
     void next(vector<int> nums) {
          

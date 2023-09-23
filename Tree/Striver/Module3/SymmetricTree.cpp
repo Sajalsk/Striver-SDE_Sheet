@@ -2,7 +2,8 @@
 using namespace std;
 
 template <typename T>
-class TreeNode{
+
+class TreeNode {
     
     public:
     

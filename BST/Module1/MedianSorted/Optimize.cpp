@@ -4,6 +4,7 @@ template <typename T>
 
 class Node {
 public:
+
     T data;
     vector<Node *> children;
 
@@ -13,6 +14,7 @@ public:
    
 class Solution {
 public:
+
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
         
 };

@@ -4,20 +4,22 @@ template <typename T>
 
 class TreeNode {
 public:
+
     T data;
     vector<TreeNode *> children;
 
     TreeNode(T data) {
         this->data = data;
     }
-    class Solution {
+
+class Solution {
 public:
     
     TreeNode* solve(int left , int right , vector<int>&nums ){
         
         if(left>right) return nullptr;
             
-        int mid = left + (right-left)/2;
+        int mid = (left+right)/2;
         
         TreeNode* root = new TreeNode(nums[mid]);
 

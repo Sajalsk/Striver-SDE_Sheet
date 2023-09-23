@@ -31,7 +31,7 @@ public:
                     slow = slow->next;
                     head = head->next;
                 }
-                return slow;
+                  return slow;
             }
         }
         return NULL;

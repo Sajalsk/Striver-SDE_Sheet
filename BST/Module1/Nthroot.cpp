@@ -4,6 +4,7 @@ template <typename T>
 
 class Node {
 public:
+
     T data;
     vector<Node *> children;
 
@@ -28,7 +29,7 @@ public:
    
 }
 
-int NthRoot(int n, int m) {
+int NthRoot(int n, int m) {   // 3 27
 
     int low = 1, high = m , mid , check;
 

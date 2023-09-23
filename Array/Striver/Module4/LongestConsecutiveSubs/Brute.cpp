@@ -3,6 +3,7 @@ using namespace std;
 
 class Solution {
 public:
+
     int longestConsecutive(vector<int>& nums) {
         
         int n=nums.size();
@@ -21,7 +22,7 @@ public:
             count=1;
             }
         }
-          max1=max(max1,count); // for last index
+          max1=max(max1,count);    // for last index
           return max1;  
     }
 };

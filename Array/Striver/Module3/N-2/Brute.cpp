@@ -3,6 +3,7 @@ using namespace std;
 
 class Solution {
 public:
+
     int majorityElement(vector<int>& nums) {
         
         int n=nums.size(),count=1;

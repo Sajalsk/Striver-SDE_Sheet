@@ -13,7 +13,7 @@ public:
             res[i].resize(i+1);
             res[i][0]=res[i][i]=1;
             
-            for (int j=1;j<i;j++) {            // <i !important
+            for (int j=1;j<i;j++) {                  // <i !important
                 res[i][j]=res[i-1][j-1]+res[i-1][j];
             }
         }

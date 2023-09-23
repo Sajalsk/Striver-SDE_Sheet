@@ -1,31 +1,32 @@
 #include <bits/stdc++.h> 
 using namespace std;
 
-	void insert(stack<int> &stack, int temp) {
+	void insert(stack<int>&s, int temp) {
 
-    if(stack.empty()) stack.push(temp);      
-           
-     else if(stack.top() <= temp) {              // 5 -2 9 -7 3   - >  9 5 3 -2 -7
-        stack.push(temp);        
-        return;    
-    }   
-     else { 
-
-        int temp2 = stack.top();        
-        stack.pop(); 
-               
-        insert(stack, temp);        
-        stack.push(temp2);    
+    if(s.empty()|| s.top()<temp) {
+        s.push(temp);
+        return;
     }
+
+    int val = s.top();
+    s.pop();
+    insert(s,temp);
+    
+    s.push(val);
+
+    return;
 }
 
-void sortStack(stack<int> &stack) {  
+void sortStack(stack<int>& s) {
 
-    if(stack.empty())   return;         
+    // base case 
+    if(s.size()==0 || s.size()==1) return;
+        
+    int temp= s.top();
+    s.pop();
 
-    int temp = stack.top();    
-    stack.pop();  
+    sortStack(s);
+    insert(s,temp);
 
-    sortStack(stack);    
-    insert(stack, temp); 
+    return;
 }

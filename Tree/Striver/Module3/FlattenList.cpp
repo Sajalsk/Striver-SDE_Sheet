@@ -10,8 +10,7 @@ class TreeNode{
     TreeNode* left;
     TreeNode* right; 
     
-    TreeNode( T data)
-    {
+    TreeNode( T data) {
         this->data=data;
         left=NULL;
         right=NULL;

@@ -13,7 +13,7 @@ public:
         int st = 0, end = 0;
         
         // Odd length
-        for(int i = 0; i < n-1; ++i){
+        for(int i = 0; i < n-1; ++i) {
             int l = i, r = i;
             while(l >= 0 && r < n) {
                 if(s[l] == s[r]) {
@@ -32,7 +32,7 @@ public:
         
         // Even length
         for(int i = 0; i < n-1; i++) {
-            int l = i, r = i+1;
+            int l = i, r = i+1;                // change in r
             while(l >= 0 && r < n) {
                 if(s[l] == s[r]) {
                     l--; r++;

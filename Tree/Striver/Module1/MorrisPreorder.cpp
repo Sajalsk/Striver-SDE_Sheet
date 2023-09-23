@@ -14,10 +14,12 @@ class TreeNode {
 
 class Solution {
 public:
-    vector<int> preorderTraversal(TreeNode* root) {
-       vector < int > preorder;
 
-  TreeNode * cur = root;
+    vector<int> preorderTraversal(TreeNode* root) {
+
+    vector < int > preorder;
+    TreeNode * cur = root;
+
   while (cur != NULL) {
 
     if (cur -> left == NULL) {
@@ -29,11 +31,11 @@ public:
         prev = prev -> right;
       }
 
-      if (prev -> right == NULL) {     // make a thread bw right and curr;
+      if (prev -> right == NULL) {                // make a thread bw right and curr;
         prev -> right = cur;
         preorder.push_back(cur -> val);          // Change in insertion for value in preorder
         cur = cur -> left;
-      } else {               // right is already pointing to the curr so unthread it.
+      } else {                                   // right is already pointing to the curr so unthread it.
         prev -> right = NULL;
         cur = cur -> right;
       }

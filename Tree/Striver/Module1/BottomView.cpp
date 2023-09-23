@@ -14,7 +14,8 @@ class TreeNode {
     }
 
 class Solution {
-  public:
+public:
+
     vector <int> bottomView(Node *root) {
 
         vector<int> ans; 

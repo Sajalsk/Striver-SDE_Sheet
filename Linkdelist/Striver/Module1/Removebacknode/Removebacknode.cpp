@@ -15,6 +15,7 @@ class ListNode {
 
 class Solution {
 public:
+
     ListNode* removeNthFromEnd(ListNode* head, int n) {
         
        ListNode * start = new ListNode();

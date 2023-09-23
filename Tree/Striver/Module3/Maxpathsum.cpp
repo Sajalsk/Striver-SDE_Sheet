@@ -18,15 +18,15 @@ class TreeNode{
 
 int main() {
 
-     class Solution {
+class Solution {
 public:
     
     int Solve(TreeNode*root,int &max1) {
         
         if(!root) return 0;
         
-        int lh =Solve(root->left,max1);
-        int rh =Solve(root->right,max1);
+        int lh = Solve(root->left, max1);    //  sub - children sum of al  the left children
+        int rh = Solve(root->right,max1);
         
         if(lh<0) lh=0;
         if(rh<0) rh=0;

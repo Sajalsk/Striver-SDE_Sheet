@@ -4,6 +4,7 @@ template <typename T>
 
 class TreeNode {
 public:
+
     T data;
     vector<TreeNode *> children;
 
@@ -13,6 +14,7 @@ public:
     
 class Solution {
 public: 
+
     vector<int> res;
     void inorder(TreeNode* root) {          // Inorder keeps the BT in sorted way
 

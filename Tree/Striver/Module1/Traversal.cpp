@@ -17,16 +17,16 @@ class TreeNode {
 class Solution {
 public:
     
-    vector<int>res;
+    vector<int>inorder;
     vector<int> inorderTraversal(TreeNode* root) {
         
-        if(root==NULL) return res;
+        if(root==NULL) return inorder;
         
         inorderTraversal(root->left);
-        res.push_back(root->val);
+        inorder.push_back(root->val);
         inorderTraversal(root->right);
         
-        return res;
+        return inorder;
     }
 };
 
@@ -34,16 +34,16 @@ public:
 class Solution {
 public:
     
-    vector<int>res;
+    vector<int>preorder;
     vector<int> preorderTraversal(TreeNode* root) {
         
-        if(root==NULL) return res;
+        if(root==NULL) return preorder;
         
-        res.push_back(root->val);
+        preorder.push_back(root->val);
         preorderTraversal(root->left);
         preorderTraversal(root->right);
         
-        return res;
+        return preorder;
         
     }
 };
@@ -51,9 +51,9 @@ public:
 // PostOrder
 class Solution {
 public:
+
  vector<int> postorder;
     
-   
     TreeNode <int>* postorderTraversal(TreeNode* root) {
         
         if(root==NULL)  return postorder;
@@ -64,6 +64,5 @@ public:
         
         return postorder;
     }
-
-};
+ };
 };

@@ -17,18 +17,18 @@ class TreeNode {
 
     int widthOfBinaryTree(TreeNode* root) {
 
-        int n,start,end,dif,res=1;
+      int start,end,dif,res=1;
 
         queue<pair<TreeNode*,long>> q;
         q.push({root,1});
        
         while(!q.empty()) {
 
-             n = q.size();
+            int n = q.size();
 
-            for(int i=0; i<n; i++)  {
+            for(int i=0;i<n;i++)  {
 
-            auto it = q.front();           // Imp Line
+            auto it = q.front();          
             q.pop();   
 
             TreeNode* node = it.first;   // node=2 line=0;
@@ -36,7 +36,7 @@ class TreeNode {
 
                 if(i==0) {
                     start = pos;
-                    dif = pos-1;
+                    dif   = pos-1;
                 }
 
                 if(i==n-1) end = pos;

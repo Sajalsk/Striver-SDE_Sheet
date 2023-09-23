@@ -8,8 +8,7 @@ class TreeNode {
     T data;
     vector <TreeNode*> children;
     
-    TreeNode(T data)
-    {
+    TreeNode(T data) {
         this->data=data;
     }
 
@@ -17,9 +16,9 @@ class Solution {
 public:
 
     vector<string> ans;
-    void solve(TreeNode* root, string temp){
+    void solve(TreeNode* root, string temp) {
          
-        if (root==NULL)    return;
+        if (root==NULL) return;
          
         if(root->left==NULL && root->right==NULL) {
 
@@ -29,6 +28,7 @@ public:
         }
 
         temp+= to_string(root->val)+ "->";
+
         solve(root->left,temp);
         solve(root->right,temp);
     }

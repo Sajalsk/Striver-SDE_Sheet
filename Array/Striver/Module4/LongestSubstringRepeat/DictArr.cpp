@@ -3,6 +3,7 @@ using namespace std;
 
 class Solution {
 public:
+
     int lengthOfLongestSubstring(string s) {
         
         if(s.length()==0) return 0;

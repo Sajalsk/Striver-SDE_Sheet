@@ -1,7 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 class Solution {
 public:
+
     void setZeroes(vector<vector<int>>& matrix) {
         
         int m = matrix.size();
@@ -24,7 +26,7 @@ public:
         for (int i=0;i<m;i++) {
             if (matrix[i][j]==0) { 
             for (int k=0;k<m;k++) {             // converting row
-                if (matrix[k][j]!=0) {
+                if (matrix[k][j]!=0) {                 // keeping coln const
                     matrix[k][j]=-1011;
                 }
             }  
@@ -35,9 +37,7 @@ public:
     
     for (int i=0;i<m;i++) {
         for (int j=0;j<n;j++) {
-            if (matrix[i][j]==-1011) {
-               matrix[i][j]=0;
-            }
+            if (matrix[i][j]==-1011)   matrix[i][j]=0;
         }
     }   
 }

@@ -4,6 +4,7 @@ template <typename T>
 
 class TreeNode {
 public:
+
     T data;
     vector<TreeNode *> children;
 
@@ -13,6 +14,7 @@ public:
 
 class Solution {
 public:
+
     TreeNode* searchBST(TreeNode* root, int val) {
       
         TreeNode *curr = root ; 
@@ -23,7 +25,7 @@ public:
             if (curr -> val > val)  curr = curr -> left; 
             else  curr = curr -> right ;    
         }
-        return NULL ;  
+         return NULL ;  
     }
 };
 

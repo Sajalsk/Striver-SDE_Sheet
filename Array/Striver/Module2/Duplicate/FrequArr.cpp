@@ -6,15 +6,14 @@ public:
 
     int findDuplicate(vector<int>& nums) {
         
-        int i=0,n=nums.size();
-        vector<int>arr(n+1,0);
+        vector<int>arr(nums.size(),0);
         
-        for( i=0;i<n;i++)  arr[nums[i]]++;
+        for( int i=0;i<nums.size();i++)  arr[nums[i]]++;
       
-        for( i=0;i<n;i++) {
+        for( int i=0;i<nums.size();i++) {
             if(arr[i]>1) return i;
         }
         
-        return i;
+        return -1;
     }
 };
