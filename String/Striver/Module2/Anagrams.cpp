@@ -3,6 +3,7 @@ using namespace std;
 
 class Solution {
 public:
+
     bool isAnagram(string s, string t) {
         
         if(s.length()!=t.length()) return false;
@@ -14,7 +15,7 @@ public:
         
               
         for(auto it:s) {
-            if(mpp1[it]!=mpp2[it]) return false;
+            if(mpp1[it]!=mpp2[it]) return false;         // traverse finding
         }
         
         return true;

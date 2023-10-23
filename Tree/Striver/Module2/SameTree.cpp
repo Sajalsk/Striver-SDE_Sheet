@@ -2,10 +2,10 @@
 using namespace std;
 
 template <typename T>
-class TreeNode
-{
 
+class TreeNode {
 public:
+
     T data;
     TreeNode *left;
     TreeNode *right;

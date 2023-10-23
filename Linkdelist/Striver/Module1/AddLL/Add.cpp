@@ -21,8 +21,8 @@ public:
         ListNode *p= l1;
         ListNode *q= l2;
         
-        ListNode *ans= new ListNode(0) ;
-        ListNode *curr = ans;
+        ListNode *res= new ListNode(0) ;
+        ListNode *curr = res;
         
         int carry=0;
 
@@ -45,7 +45,7 @@ public:
         if(carry>0) {
             curr->next = new ListNode (carry);
         } 
-         return ans->next;
+         return res->next;
         
     }
 };

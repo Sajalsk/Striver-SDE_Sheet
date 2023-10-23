@@ -18,7 +18,7 @@ public:
         }
 
 		// else if the coin is larger than the amount, we can't take it
-        else{
+        else {
             return dp[n][amount] = 0+help(coins, amount, n-1,dp);
         }
     }

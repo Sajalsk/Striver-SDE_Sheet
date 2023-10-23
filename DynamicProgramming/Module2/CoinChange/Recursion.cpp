@@ -11,7 +11,7 @@ public:
         
         if(coins[i]>amount) return  0+Solve(i+1,coins,amount,res);  
     
-return min(1+Solve(i,coins,amount-coins[i],res),Solve(i+1,coins,amount,res) );
+return min(1+Solve(i,coins,amount-coins[i],res),Solve(i+1,coins,amount,res) );   // take or not
              
     }
 
@@ -19,6 +19,7 @@ return min(1+Solve(i,coins,amount-coins[i],res),Solve(i+1,coins,amount,res) );
       
       int res=Solve(0,coins,amount,res);
       return (res == INT_MAX - 1 ) ? -1 : res; 
+      
     }
     
 };

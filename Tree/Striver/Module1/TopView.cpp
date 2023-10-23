@@ -36,14 +36,13 @@ class Solution {
             if(mpp.find(line) == mpp.end()) mpp[line] = node->data;   // change from bottom view
             
             if(node->left != NULL)   q.push({node->left, line-1}); 
-            if(node->right != NULL)  q.push({node->right, line + 1});
-            
+            if(node->right != NULL)  q.push({node->right, line + 1});  
         }
         
         for(auto it : mpp) {
             ans.push_back(it.second); 
         }
-        return ans;
+         return ans;
     }
 }
 

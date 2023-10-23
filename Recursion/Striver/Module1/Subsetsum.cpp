@@ -4,7 +4,7 @@ using namespace std;
 class Solution {
 public:
 
-void help(int index,vector<int>&arr, vector<int>&res,int sum) {        // In Not-Sorted No Unique.
+void help(int index,vector<int>&arr, vector<int>&res,int sum) {        // In Non-Sorted No Unique.
     
     if(index==arr.size()) {
         res.push_back(sum);

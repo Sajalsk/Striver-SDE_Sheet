@@ -4,6 +4,7 @@ template <typename T>
 
 class TreeNode {
 public:
+
     T data;
     vector<TreeNode *> children;
 
@@ -22,7 +23,7 @@ int findCeil(BinaryTreeNode<int> *node, int x){
         
         if(node->data==x) return node->data;
 
-        if(node->data>x) {
+        if(x<node->data) {
             Ceil=node->data;
             node=node->left;
         } 

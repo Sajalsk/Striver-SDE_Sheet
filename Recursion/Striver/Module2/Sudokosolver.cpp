@@ -25,9 +25,10 @@ public:
             if (board[row][col] == '.') {
               for (char c = '1'; c <= '9';c++) {     // checking for all the values;
                 if (isvalid(board, c, row, col)) {
+
                    board[row][col] = c;
                    
-                    if (solver(board, row))
+                   if (solver(board, row))
                     return true;                      // All enteries are filled and reached at last
                     else
                     board[row][col] = '.';

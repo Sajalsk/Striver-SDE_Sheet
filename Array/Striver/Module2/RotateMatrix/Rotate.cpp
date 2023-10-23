@@ -16,8 +16,8 @@ public:
                 reverse[a][b]=matrix[i][j];
                 b++;
             }
-            b=0;
             a++;
+            b=0;
         }
         
         for (int i=0;i<n;i++) {

@@ -10,7 +10,7 @@ public:
         int n = nums.size();
         int ans = INT_MIN;
         
-        for(int i = 0; i<n;i++)  {
+        for(int i = 0;i<n;i++)  {
               curSum = nums[i];
             for(int j = i+1;j<n;j++)  {
                 curSum += nums[j];

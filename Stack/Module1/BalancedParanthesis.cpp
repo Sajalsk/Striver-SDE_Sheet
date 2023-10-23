@@ -7,6 +7,8 @@ public:
     bool isValid(string s) {
         
         stack<int>st;
+
+        if(s.length()%2!=0) return false;
         
         for(int i=0;i<s.length();i++) {
             

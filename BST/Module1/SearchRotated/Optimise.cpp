@@ -4,28 +4,38 @@ using namespace std;
 class Solution {
 public:
 
-    int search(vector<int>& a, int target) { // [4,5,6,7,0,1,2], target = 0  i =4
+    int search(vector<int>& nums, int target) {
 
-        int n=a.size();
-        int l=0, r=n-1;
-        
-        while(l<=r) {
+        int low = 0,high = nums.size() - 1;
 
-            int m=(l+r)/2;
+        while(low <= high) {
 
-            if(a[m]==target) return m;
-
-            if(a[m]>a[n-1]) {                           // left side of peak element
-
-                if(target>a[m] || target<a[0])  l=m+1; 
-                else   r=m-1; 
+            int mid = (low + high)/2;
+            if(nums[mid] == target)  return mid;
+           
+            // identify the sorted half righ // left
+            // left sorted
+            if(nums[low] <= nums[mid]) {
+                // target lies within you 
+                if(nums[low] <= target && target <= nums[mid]){
+                    // remove the righ half
+                    high = mid - 1;
+                }
+                else  low = mid + 1;
                 
-            } else {                                     // right side of peak element
+            }
 
-                if(target<a[m] || target>a[n-1]) r=m-1;
-                else l=m+1;  
+            // righ sorted
+            else {
+                if(nums[mid] <= target && target <= nums[high]){
+                    // remove left half
+                    low = mid + 1;
+                }
+                else{
+                    high = mid - 1;
+                }
             }
         }
-         return -1;
+        return -1;
     }
 };

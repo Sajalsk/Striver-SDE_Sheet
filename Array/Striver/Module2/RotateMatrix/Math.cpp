@@ -10,13 +10,15 @@ void rotate(vector < vector < int >> & matrix) {
 
     //Transposing the matrix
     for (int i = 0; i < n; i++) {
-      for (int j = 0; j < i; j++) {         // imp line <i
+      for (int j = 0; j < i; j++) {            // @imp line <i
         swap(matrix[i][j], matrix[j][i]);
       }
     }
 
     //Reversing each row of the matrix
-    for (int i = 0; i < n; i++) reverse(matrix[i].begin(), matrix[i].end());
+    for (int i = 0; i < n; i++) {
+        reverse(matrix[i].begin(), matrix[i].end());
+    } 
 }
 
 };

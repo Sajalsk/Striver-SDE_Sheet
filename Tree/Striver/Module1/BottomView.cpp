@@ -21,8 +21,7 @@ public:
         vector<int> ans; 
         if(root == NULL) return ans; 
  
-        queue<pair<Node*, int>> q; 
-        q.push({root, 0});
+        queue<pair<Node*, int>> q({root,0}); 
 
         map<int,int> mpp; 
 
@@ -34,7 +33,6 @@ public:
             TreeNode* node = it.first;   // node=2 line=0;
             int line = it.second; 
 
-           
             mpp[line] = node->data;   // 0,2   // overwritten
             
             if(node->left != NULL)   q.push({node->left, line-1}); 

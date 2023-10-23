@@ -30,10 +30,12 @@ class ListNode {
         int count = 0;
 
         while (curr != NULL && count < k) {
+            
             temp = curr->next;
             curr->next = prev;
             prev = curr;
             curr = temp;
+
             count++;                      //      2 1 3 4 5 6   , count=2
         }
 
@@ -42,10 +44,12 @@ class ListNode {
             // Reverse back the first count nodes to maintain the original order
             ListNode* fast = NULL;
             while (count > 0) {
+
                 fast = prev->next;      // fast=temp, prev=curr , curr=prev @important line
                 prev->next = curr;
                 curr = prev;
                 prev = fast;
+                
                 count--;
             }
              return curr;

@@ -25,8 +25,8 @@ public:
         rh+=Solve(root->right);
          
         curr=lh+rh;
-         
         ans=max(ans,curr);
+        
         return 1+max(lh,rh);
     }
     

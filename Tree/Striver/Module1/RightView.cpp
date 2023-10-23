@@ -20,7 +20,7 @@ public:
         if(arr.size()==len)    arr.push_back(root->val);
     
         solve(root->right,arr,len+1);
-        solve(root->left,arr,len+1);   
+        solve(root->left,arr,len+1);            // for left skew
     }
     
     vector<int> rightSideView(TreeNode* root) {

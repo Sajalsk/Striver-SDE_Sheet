@@ -25,11 +25,13 @@ public:
         
         if(!root) return 0;
         
-        int lh = checkBalance(root->left);
-        int rh = checkBalance(root->right);
+        int lh=0,rh=0;
+        
+        int lh += checkBalance(root->left);
+        int rh += checkBalance(root->right);
         
         if(abs(lh-rh) > 1) ans = false;
-        return 1 + max(lh, rh);  // since returning i.e its a balanced tree and ans is true globally
+        return 1 + max(lh, rh);      // since returning i.e its a balanced tree and ans is true globally
     }
     
     bool isBalanced(TreeNode* root){

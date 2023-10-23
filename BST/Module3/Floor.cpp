@@ -12,7 +12,7 @@ public:
     }
 
 class Solution {
-    public:
+public:
 
     int floorInBST(TreeNode<int> * root, int X) {
 

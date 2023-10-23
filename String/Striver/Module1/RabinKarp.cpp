@@ -15,10 +15,12 @@ public:
         }                                           // a= abcdabcd  
         
         if(a.find(b) != -1) return cnt;            // finding b
-            a += temp;                            // a = abcdabcdabcd 
+
+            a += temp;                             // a = abcdabcdabcd 
             cnt++;
         
-        if(a.find(b) != -1) return cnt;          // finding b....found
-        return -1;
+        if(a.find(b) != -1) return cnt;            // finding b....found
+
+        return -1;                                // Not
     }
 };

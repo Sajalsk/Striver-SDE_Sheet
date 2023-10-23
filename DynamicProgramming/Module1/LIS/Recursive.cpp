@@ -18,8 +18,6 @@ public:
     }
     
     int lengthOfLIS(vector<int>& nums) {
-
-        int n=nums.size();
         
       return help(0,-1,nums);
     }

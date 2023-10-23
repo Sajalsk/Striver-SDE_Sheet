@@ -29,7 +29,7 @@ public:
    
 }
 
-int NthRoot(int n, int m) {   // 3 27
+int NthRoot(int n, int m) {       // 3 27 res = 3
 
     int low = 1, high = m , mid , check;
 

@@ -20,7 +20,7 @@ void solve(Node* root,vector<int>& arr,int len) {
         if(arr.size()==len) arr.push_back(root->data);
         
         solve(root->left,arr,len+1);
-        solve(root->right,arr,len+1);   
+        solve(root->right,arr,len+1);              // for right skew
     }
 
     vector<int> leftView(Node* root) {

@@ -31,9 +31,9 @@ public:
             slow=slow->next;
            }
            
-        slow->next=slow->next->next;
+        slow->next=slow->next->next;        // removal of the  node.
        
-    return start->next;
+    return start->next;                     // returning of the linked list.
     }
 };
  };

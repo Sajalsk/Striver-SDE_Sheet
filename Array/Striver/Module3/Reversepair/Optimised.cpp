@@ -12,7 +12,7 @@ public:
         int left = low, right = mid + 1;
 
         while(left <= mid && right <= high) {
-            if((long)nums[left] > (long) 2 * nums[right]){
+            if((long)nums[left] > (long) 2 * nums[right]) {
                 count += (mid - left + 1);
                 right++;
             } else left++;

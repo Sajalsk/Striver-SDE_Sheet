@@ -19,7 +19,7 @@ public:
     class Solution {
     public:
 
-    void mirror1(TreeNode *root) {
+    void Solve(TreeNode *root) {
 
         if(root) {
             
@@ -33,7 +33,7 @@ public:
     }
 
     void mirror(TreeNode* root) {
-        mirror1(root);
+        Solve(root);
     }
 };
 

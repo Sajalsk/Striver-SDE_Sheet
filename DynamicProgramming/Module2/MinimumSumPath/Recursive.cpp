@@ -20,7 +20,8 @@ int help(int i, int j, int n, int m, vector<vector<int>>& grid) {
     
     int minPathSum(vector<vector<int>>& grid) {
         
-        int n = grid.size(), m = grid[0].size();
+        int n = grid.size();
+        int m = grid[0].size();
     
         int ans = help(0, 0, n, m, grid);
         return ans;

@@ -11,6 +11,7 @@ class TreeNode{
     TreeNode* right; 
     
     TreeNode( T data) {
+        
         this->data=data;
         left=NULL;
         right=NULL;

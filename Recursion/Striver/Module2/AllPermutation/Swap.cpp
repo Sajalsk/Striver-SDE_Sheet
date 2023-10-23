@@ -4,25 +4,26 @@ using namespace std;
 class Solution {
 public:
     
- void Solve(vector<vector<int>>&ans,vector<int>&nums,int ind) {
+ void Solve(vector<vector<int>>&res,vector<int>&nums,int ind) {
         
      if(ind==nums.size()) {
-         ans.push_back(nums);
+         res.push_back(nums);
          return;
      }
      
      for(int i=ind;i<nums.size();i++) {     // index
 
          swap(nums[i],nums[ind]);
-         Solve(ans,nums,ind+1);
+         Solve(res,nums,ind+1);
          swap(nums[i],nums[ind]);          // backtracking
       } 
     }
+
     vector<vector<int>> permute(vector<int>& nums) {
         
-        vector<vector<int>>ans;
+        vector<vector<int>>res;
         
-        Solve(ans,nums,0);
-        return ans;
+        Solve(res,nums,0);
+        return res;
     }
 };

@@ -11,8 +11,9 @@ public:
         this->data = data;
     }
     
-class Solution{
-    public:
+class Solution {
+ public:
+
     int kthElement(int arr1[], int arr2[], int n, int m, int k) {
 
         vector<int> res;

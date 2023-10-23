@@ -13,8 +13,7 @@ public:
 
         unordered_map<int,int>mp;
        
-
-        for(int i=n-1;i>=0;i--) {                          //  [4,1,2]  [1,3,4,2]
+        for(int i=n-1;i>=0;i--) {                          //  [4,1,2]  [1,3,4,2]     [-1,3,-1]  [3,4,-1,-1]
 
             while(!st.empty() && nums2[i]>=st.top()) {     // Selection array
                 st.pop();

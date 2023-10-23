@@ -3,7 +3,7 @@ using namespace std;
 template <typename T>
 
 class TreeNode {
-    public:
+public:
     
     T data;
     vector <TreeNode*> children;
@@ -14,6 +14,7 @@ class TreeNode {
 
 class Solution {
 public:
+
       vector<vector<int>> levelOrder(TreeNode* root) {
         
         vector<vector<int>> level;
@@ -28,13 +29,13 @@ public:
 
             for (int i=0;i<size;i++) {
             
-            TreeNode* node = q.front();
+            TreeNode* temp = q.front();
             q.pop();
 
-            if(node->left)  q.push(node->left); // keep left of that root to check whether its left exist not
-            if(node->right) q.push(node->right);
+            if(temp->left)  q.push(temp->left); // keep left of that root to check whether its left exist not
+            if(temp->right) q.push(temp->right);
             
-            ans.push_back(node->val);        // push that root into the ans array.  
+            ans.push_back(temp->val);        // push that root into the ans array.  
          }
             level.push_back(ans);    
         }

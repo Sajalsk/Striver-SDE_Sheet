@@ -3,7 +3,7 @@ using namespace std;
 
 	void insert(stack<int>&s, int temp) {
 
-    if(s.empty()|| s.top()<temp) {
+    if(s.empty()|| temp>s.top()) {
         s.push(temp);
         return;
     }
