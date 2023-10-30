@@ -6,8 +6,8 @@ public:
     void rotate(vector<vector<int>>& matrix) {
         
         int a=0,b=0;
-        int n=matrix.size();   // 3
-        int m=matrix[0].size();  // 3
+        int n=matrix.size();   
+        int m=matrix[0].size(); 
         
     vector<vector<int>> reverse(m, vector<int>(n,0));
   

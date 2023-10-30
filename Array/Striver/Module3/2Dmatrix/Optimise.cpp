@@ -15,7 +15,7 @@ public:
             
             int mid =(low+high)/2;
             
-            if(matrix[mid/m][mid%m]==target) return true;
+            if(matrix[mid/m][mid%m]==target)       return true;
             else  if(matrix[mid/m][mid%m]<target)  low = mid+1;
             else  if(matrix[mid/m][mid%m]>target)  high=mid-1;
         }

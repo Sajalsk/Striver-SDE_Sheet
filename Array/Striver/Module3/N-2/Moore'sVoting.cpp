@@ -16,9 +16,7 @@ public:
             else if(count==0) {
                 elem=nums[i];
                 count++;
-            }
-            
-            else count--;  
+            }  else count--;  
         }
          return elem;
     }

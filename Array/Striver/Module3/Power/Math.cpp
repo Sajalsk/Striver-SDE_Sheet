@@ -16,9 +16,7 @@ public:
             if(m%2==0) {
                 x=x*x;
                 m=m/2;
-            }
-            
-            else {
+            } else {
                 ans=ans*x;
                 m--;
             }

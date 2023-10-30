@@ -3,23 +3,21 @@ using namespace std;
 
 pair<int, int> missingAndRepeating(vector<int> &arr, int n) {
 
-int Isum,Nsum,sSum;
+    pair<int,int>p;
+    set<int>s1(arr.begin(),arr.end());
 
-    set<int>s1;
-    pair<int,int>p1;                              // 3 1 2 5 3
+    int indexsum=0,realsum=0,sum=0;
 
-    for (int i=1;i<=n;i++)  Isum+=i;              // 15
-    for (int i=0;i<n;i++) Nsum+=arr[i];           // 14
- 
-    for (int i=0;i<n;i++)  s1.insert(arr[i]);
+    for(int i=1;i<=n;i++)  indexsum+=i;
+    for(int i=0;i<n;i++)   realsum+=arr[i];
+    for(auto it:s1)        sum=sum+it;
 
-    for (auto it:s1)  sSum+=it;                    // 11
 
-    int Missing = Isum-sSum;                       // 4
-    int Repeat  = Nsum-sSum;                       //3
+    int repeat=indexsum-sum;
+    int miss=realsum-sum;
 
-    p1.first =Missing;
-    p1.second=Repeat;
+    p.first=repeat;
+    p.second=miss;
 
-    return p1;
+    return p;
 }

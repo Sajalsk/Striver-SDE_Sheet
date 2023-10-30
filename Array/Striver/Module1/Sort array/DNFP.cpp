@@ -9,7 +9,7 @@ public:
         int n=nums.size();
         int low = 0, mid = 0, high = n - 1; 
 
-    while (mid <= high) {
+    while (mid <= high) {                      // !important mid<high;
         
         if (nums[mid] == 0) {                 // !important nums[mid];
             swap(nums[low], nums[mid]);

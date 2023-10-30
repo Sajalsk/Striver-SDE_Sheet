@@ -4,16 +4,16 @@ using namespace std;
 class Solution {
 public:
 
-    int findDuplicate(vector<int>& nums) {
+    int findDuplicate(vector<int>& nums) {    // given size of nums is n+1;
         
-        vector<int>arr(nums.size(),0);
+        vector<int>freq(nums.size(),0);
         
         for(int i=0;i<nums.size();i++) {
-            arr[nums[i]]++;
+            freq[nums[i]]++;
         }
       
         for( int i=0;i<nums.size();i++) {
-            if(arr[i]>1) return i;
+            if(freq[i]>1) return i;
         }
         
         return -1;

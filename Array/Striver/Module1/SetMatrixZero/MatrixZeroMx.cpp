@@ -11,7 +11,7 @@ public:
         int m = matrix[0].size();
         
         for (int i=0;i<n;i++) {
-            if(matrix[i][0]==0) flag=0;                   // chk in first colmn
+            if(matrix[i][0]==0) flag=0;                   // chk in first colmn of all rows
             for (int j=1;j<m;j++) {
                 if(matrix[i][j]==0) {
                     matrix[i][0]=0;

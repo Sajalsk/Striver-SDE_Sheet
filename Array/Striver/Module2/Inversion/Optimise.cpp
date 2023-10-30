@@ -14,7 +14,7 @@ public:
         
         while(l <= mid && r <= end) {
 
-            if((long)arr[l] > (long)  arr[r]) {  // change in line
+            if((long)arr[l] > (long)arr[r]) {  // change in line
                 count += (mid - l + 1);
                 r++;
             } else  l++;
@@ -23,9 +23,9 @@ public:
     // Not working Solution
 
         sort(arr.begin() + start, arr.begin() + end + 1);
-        return;
-      
+        return;  
     }
+    
  void  mergeSort(vector<int>& arr, int start, int end) {
 
         if(start == end) return;

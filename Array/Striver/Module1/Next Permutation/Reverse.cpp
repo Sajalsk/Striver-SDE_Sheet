@@ -19,6 +19,6 @@ public:
             } 
         }
         
-         sort(nums.begin(),nums.end());        // 3 2 1 => 1 2 3
+         sort(nums.begin(),nums.end());        //  In case of this type of array->   3 2 1 => 1 2 3
     }
 };
