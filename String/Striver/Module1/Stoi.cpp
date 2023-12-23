@@ -18,6 +18,7 @@ public:
         positive == true ? i++ : i;
         negative == true ? i++ : i;        // confirming sign
         
+        
         while(i < len && s[i] >= '0' && s[i] <= '9') {
             num = num*10 + (s[i]-'0');     // 5->ch arr (53-48)
             i++;
@@ -38,6 +39,7 @@ public:
 // class Solution {
 // public:
 //     int myAtoi(string s) {
+
 //         stringstream str(s);
 //         int i = 0;
 //         str >> i;

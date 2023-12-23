@@ -10,7 +10,7 @@ pair<int, int> missingAndRepeating(vector<int> &arr, int n) {
 
     for(int i=1;i<=n;i++)  indexsum+=i;
     for(int i=0;i<n;i++)   realsum+=arr[i];
-    for(auto it:s1)        sum=sum+it;
+    for(auto it:s1)        sum=sum+it;          // unique arr sum
 
 
     int repeat=indexsum-sum;

@@ -15,7 +15,7 @@ class Solution {
 public:
 
     int findKthLargest(vector<int>& nums, int k) {
-         if(!root)  return -1;
+        if(!root)  return -1;
        
        int rightans=findKthLargest(root->right,k); 
        return rightans;

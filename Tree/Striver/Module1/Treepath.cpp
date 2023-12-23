@@ -15,7 +15,7 @@ class TreeNode {
 class Solution {
 public:
 
-    vector<string> ans;
+    vector<string> res;
     void solve(TreeNode* root, string temp) {
          
         if (root==NULL) return;
@@ -23,7 +23,7 @@ public:
         if(root->left==NULL && root->right==NULL) {
 
             temp=temp+to_string(root->val);
-            ans.push_back(temp);
+            res.push_back(temp);
             return;
         }
 
@@ -38,7 +38,7 @@ public:
         string temp="";
         solve(root,temp);
         
-        return ans;
+        return res;
     }
 }
 };

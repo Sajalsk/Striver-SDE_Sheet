@@ -14,7 +14,7 @@ public:
             if(matrix[i][0]==0) flag=0;                   // chk in first colmn of all rows
             for (int j=1;j<m;j++) {
                 if(matrix[i][j]==0) {
-                    matrix[i][0]=0;
+                    matrix[i][0]=0;                        // zero'th row and colmn to be zero as an array
                     matrix[0][j]=0;
                 }
             }
@@ -27,7 +27,7 @@ public:
             }
         }
         
-        if(flag==0)   matrix[i][0]=0;                   // 1st colmn 
+        if(flag==0)   matrix[i][0]=0;                   // 1st colmn of all the rows to be checked
     }
         
     }

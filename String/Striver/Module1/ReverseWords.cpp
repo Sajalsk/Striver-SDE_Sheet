@@ -9,7 +9,7 @@ public:
         stack<string> st;
         string str = "";
 
-        for(int i=0; i<s.size(); i++) {
+        for(int i=0; i<s.length(); i++) {
             if(s[i]== ' ') {
                 if(!str.empty())  st.push(str);      // no prior space before a word
                 str = "";                            // making the str empty

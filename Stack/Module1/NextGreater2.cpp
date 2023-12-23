@@ -19,15 +19,14 @@ public:
             
         }
         
-        for(int i=n-1;i>=0;i--)  {                    // for Circular
+        for(int i=n-1;i>=0;i--)  {                              // for Circular
              while(!s.empty() && nums[i]>=s.top()) 
                 s.pop();
             
           v[i]=(s.empty())?-1:s.top();
             s.push(nums[i]);
         }
-        
-        return v;
+         return v;
         
     }
 };

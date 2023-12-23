@@ -12,7 +12,7 @@ public:
              for(int j=i+1;j<n;j++) {
 
                 diff=prices[j]-prices[i];
-                if(diff<0) diff=0;
+                if(diff<0) diff=0;              // kadanes algorithm
 
                 max1=max(max1,diff);
             }

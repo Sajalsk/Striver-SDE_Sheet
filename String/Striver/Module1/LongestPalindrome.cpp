@@ -13,7 +13,7 @@ public:
         int st = 0, end = 0;
         
         // Odd length
-        for(int i = 0; i < n-1; ++i) {
+        for(int i = 0; i < n-1; ++i) {    // less than n-1;
             int l = i, r = i;
             while(l >= 0 && r < n) {
                 if(s[l] == s[r]) {
@@ -21,14 +21,14 @@ public:
                 } else break;      
             }
 
-            int len = r-l-1;
+            int len = r-l-1;             // Inside for loop
           
             if(len > max_len) {
                 max_len = len;
                 st = l+1;
-                end = r-1;
+                // end = r-1;
             }
-        }
+        }                               // for loop ends
         
         // Even length
         for(int i = 0; i < n-1; i++) {
@@ -44,7 +44,7 @@ public:
             if(len > max_len){
                 max_len = len;
                 st = l+1;
-                end = r-1;
+                // end = r-1;
             }
         }
          return s.substr(st, max_len);     
