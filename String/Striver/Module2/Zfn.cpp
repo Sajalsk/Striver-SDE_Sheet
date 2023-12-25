@@ -10,7 +10,7 @@ public:
         
         int i=0,j=0;
         
-        int h=haystack.length();        //  haystack = "sadbutsad", needle = "sad"  return 0;
+        int h=haystack.length();             //  haystack = "sadbutsad", needle = "sad"  return 0;
         int n=needle.length();
         
         while(i<h  &&  j<n) {
@@ -21,12 +21,12 @@ public:
             }
             
              else {
-                j=0; 
+                j=0;                        // needle to the start
                 i=i-j+1;  
              }  
             
         }  
-         return j==n?i-j:-1;        // if gone to full length();
+         return j==n?i-j:-1;               // if gone to full length();
         
     }
 };

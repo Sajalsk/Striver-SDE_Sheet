@@ -34,7 +34,7 @@ int main() {
             if(curr && curr->left)  st.push(curr->left);
             
             if(!st.empty()) curr->right = st.top();
-            if(curr) curr->left=NULL;
+            if(curr) curr->left=NULL;                  // finishing the left node.
         }
     }
 };     

@@ -13,7 +13,7 @@ public:
              int minHeight = INT_MAX;
              for (int j = i; j < n; j++) {
                 minHeight = min(minHeight, heights[j]);
-                maxArea   = max(maxArea, minHeight * (j - i + 1));
+                maxArea   = max(maxArea, minHeight * (j - i + 1));  // no. of time elem remains grtr than it.
            }
          }
            return maxArea;

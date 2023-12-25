@@ -25,11 +25,11 @@ class ListNode {
         
         while(curr->next!=NULL) {
             
-            len++;
+            len++;                                  // len =5
             curr=curr->next; 
-        }
+        }                                           // curr at the last node len  = no. of node in LL
         
-        curr->next=head;                            // len = 5;
+        curr->next=head;                            // last node attachment wiht the first node i.e. head
         
         k=k%len;     // rewriting k for non - repitition k =2
         k = len-k;                 // k = 3

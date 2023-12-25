@@ -6,7 +6,7 @@ public:
 
     string longestCommonPrefix(vector<string>& strs) {
         
-        string ans="";
+        string res="";
        
         for (int i=0;i<strs[0].length();i++) {      // ["flower","flow","flight"]  ans = fl 
             char ch = strs[0][i];                   // traversing in the word only
@@ -19,8 +19,8 @@ public:
             }
             
             if(match==false)  break;
-            else   ans+=ch;  
+            else   res+=ch;  
         }
-         return ans;
+         return res;
     }
 };

@@ -36,7 +36,7 @@ public:
         while(!s1.empty()) {
 
             s2.push(s1.top());
-            s1.pop();
+            s1.pop();                           // chng of line from pop function
         }
 
         int peekVal=s2.top();

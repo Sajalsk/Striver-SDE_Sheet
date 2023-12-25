@@ -10,7 +10,7 @@ using namespace std;
 
     int val = s.top();
     s.pop();
-    insert(s,temp);
+    insert(s,temp);                // to check again if now temp should be inserted
     
     s.push(val);
 
@@ -25,7 +25,7 @@ void sortStack(stack<int>& s) {
     int temp= s.top();
     s.pop();
 
-    sortStack(s);
+    sortStack(s);                        // last elem of stack
     insert(s,temp);
 
     return;

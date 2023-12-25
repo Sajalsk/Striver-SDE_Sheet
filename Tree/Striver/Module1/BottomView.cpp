@@ -33,7 +33,7 @@ public:
             TreeNode* node = it.first;   // node=2 line=0;
             int line = it.second; 
 
-            mpp[line] = node->data;   // 0,2   // overwritten
+            mpp[line] = node->data;      // 0,2   // overwritten & overlapping is allowed
             
             if(node->left != NULL)   q.push({node->left, line-1}); 
             if(node->right != NULL)  q.push({node->right, line + 1}); 

@@ -36,8 +36,8 @@ public:
         cur = cur -> left;
       } else {                        // right is already pointing to the curr so unthread it.
         prev -> right = NULL;
-        inorder.push_back(cur -> val);
-        cur = cur -> right;
+        inorder.push_back(cur -> val); 
+        cur = cur -> right;           // the making of thread is done now go to right side of the tree
       }
     }
   }
