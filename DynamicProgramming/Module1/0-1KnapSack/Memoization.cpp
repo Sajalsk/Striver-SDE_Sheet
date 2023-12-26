@@ -11,8 +11,8 @@ int knapsackUtil(vector<int>& wt, vector<int>& val, int i, int j, vector<vector<
     if(dp[i][j]!=-1) return dp[i][j];
       
     int notTaken = 0 + knapsackUtil(wt,val,i-1,j,dp);
-    
     int taken = INT_MIN;
+    
     if(wt[i] <= j)
         taken = val[i] + knapsackUtil(wt,val,i-1,j-wt[i],dp);
         

@@ -15,6 +15,7 @@ public:
 
          swap(nums[i],nums[ind]);
          Solve(res,nums,ind+1);
+         
          swap(nums[i],nums[ind]);          // backtracking
       } 
     }

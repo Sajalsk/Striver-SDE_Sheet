@@ -1,8 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
-class Solution{
+
+class Solution {
 public:
-   int Solve(vector<int>& arr, int i, int j){
+
+   int Solve(vector<int>& arr, int i, int j) {
     
     if(i == j)  return 0;
 
@@ -11,7 +13,6 @@ public:
     for(int k = i; k<= j-1; k++) {
         
         int ans = Solve(arr,i,k) + Solve(arr, k+1,j) + arr[i-1]*arr[k]*arr[j];
-        
         min1 = min(min1,ans);   
     }
      return min1;
