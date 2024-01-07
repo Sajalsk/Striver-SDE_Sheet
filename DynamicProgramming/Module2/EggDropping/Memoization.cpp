@@ -18,11 +18,11 @@ public:
 
             int middle = (start + end) / 2;
 
-            int left = solve(k - 1, middle - 1);   // Egg broked (just down)
-            int right = solve(k, n - middle);             // Not Broked  (middle from where not broked)
-            int temp = 1 + max(left, right);
+            int down = solve(k - 1, middle - 1);   // Egg broked (just down)
+            int up = solve(k, n - middle);             // Not Broked  (middle from where not broked)
+            int temp = 1 + max(down, up);
 
-            if (left < right)  start = middle + 1;
+            if (down < up)  start = middle + 1;
             else  end = middle - 1;
            
             answer = min(answer, temp);

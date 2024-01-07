@@ -22,7 +22,7 @@ public:
     for (int i = 1; i <= n; i++) {
 
         ans = ans * mid;
-        if (ans > m)  return 2;  
+        if (ans > m)     return 2;  
     }
      if (ans < m)        return 1;
      else if (ans == m)  return 0;

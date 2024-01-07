@@ -3,22 +3,33 @@ using namespace std;
 
 class Solution {
 public:
-    
-    int Solve(int k, int n,int Min1){
+   
+    int solve(int k, int n) {
+        
+        if (n == 0 or n == 1 || k==1) return n;
+     
+        int answer = INT_MAX;
+        int start = 1;
+        int end = n;
 
-        if(n == 0 || n == 1 || k==1) return n;       // N = 2, K = 10(floor)
-       
-        for(int i=1; i<=n; i++) {
+        while (start <= end) {
+
+            int middle = (start + end) / 2;
+
+            int down = solve(k - 1, middle - 1);   
+            int up = solve(k, n - middle);
             
-            int res = 1 + max(Solve(k-1, i-1,Min1), Solve(k, n-i,Min1));  // egg broke , not broke
-            Min1 = min(Min1, res);  
+            int temp = 1 + max(down, up);
+
+            if (down < up)  start = middle + 1;
+            else  end = middle - 1;
+           
+            answer = min(answer, temp);
         }
-          return Min1;
+         return answer;
     }
 
-    int superEggDrop(int k, int n) {  //  k == floors n = eggs
-
-        int Min1 = INT_MAX;
-        return Solve(k, n, Min1);
+    int superEggDrop(int k, int n) {
+        return solve(k, n);
     }
 };

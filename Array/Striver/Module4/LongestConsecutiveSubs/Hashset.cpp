@@ -7,18 +7,18 @@ public:
     int longestConsecutive(vector<int>& nums) {
 
         if(nums.size()==0) return 0;
-        int count =1,max1=1;
+        int len =1,maxlen=1;
         
         set<int>s(nums.begin(),nums.end());
         
         for( auto it: s) {
             
-            if(s.find(it+1)!=s.end()) count++;
+            if(s.find(it+1)!=s.end()) len++;
             else {
-                max1=max(max1,count);
-                count=1;
+                maxlen=max(maxlen,len);
+                len=1;
             }
         }        
-         return max(max1,count);  
+         return max(maxlen,len);  
     }
 };

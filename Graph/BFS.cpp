@@ -10,7 +10,7 @@ class Solution {
 
         queue<int>q({0});
 
-        visited[0]=1;     // just visited
+        visited[0]=1;     // just visited the first node.
 
         while(!q.empty()) {
 

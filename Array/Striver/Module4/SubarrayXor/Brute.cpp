@@ -2,7 +2,7 @@
 using namespace std;
 
 class Solution {
-    public:
+public:
 
     int XorSub(vector<int>nums,int k) {
 
@@ -15,8 +15,8 @@ class Solution {
           if(currxor==k)  count++; 
     }
   }
-    return count;
-    }
+   return count;
+  }
 };
 
 

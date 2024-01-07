@@ -17,7 +17,7 @@ public:
                  if(mpp.find(sum)!=mpp.end()) 
                  maxlen = max(maxlen, i-mpp[sum]);   // Index of that exisisting sum in the Map;
 
-                else  mpp[sum] = i;                  //  storing sum , index   
+                 else  mpp[sum] = i;                  //  storing sum & index     so that it could find again
             }
         }
          return maxlen;

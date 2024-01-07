@@ -18,12 +18,12 @@ public:
 
         int i=0,j=0;
 
-        int m=sizeof(arr1)/sizeof(arr1[0]);
+        int m=sizeof(arr1)/sizeof(arr1[0]);       // compute of size of array  (practice)
         int n=sizeof(arr2)/sizeof(arr2[0]);
 
         int k=m+n-1;
 
-        arr1.resize(k);
+        arr1.resize(k);                           // @imp
 
         while(m>=0 && n>=0) {
 
