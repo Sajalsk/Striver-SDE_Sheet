@@ -25,10 +25,10 @@ public:
     
     vector<vector<int>> combinationSum2(vector<int>& arr, int target) {
         
-        sort(arr.begin(),arr.end());
-        
         vector<vector<int>> ans;
         vector<int> ds;
+
+        sort(arr.begin(),arr.end());
         
         Solve(0,target,ds,ans,arr);
         return ans;

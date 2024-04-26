@@ -23,7 +23,7 @@ class ListNode {
         ListNode*fast=headA;
         ListNode*slow=headB;
         
-        while(fast!=NULL || slow!=NULL) {
+        while(fast || slow) {
             
            if(fast==slow) return slow;
             

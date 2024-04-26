@@ -25,12 +25,12 @@ public:
      for (int j=0;j<n;j++) {
         for (int i=0;i<m;i++) {
             if (matrix[i][j]==0) { 
-            for (int k=0;k<m;k++) {             // converting row
+            for (int k=0;k<m;k++) {             // converting row of non-zero
                 if (matrix[k][j]!=0) {                 // keeping coln const
                     matrix[k][j]=-1011;
                 }
             }  
-        break;
+              break;
            }     
         }  
     }

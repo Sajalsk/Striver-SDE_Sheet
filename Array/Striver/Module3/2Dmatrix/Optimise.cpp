@@ -9,7 +9,7 @@ public:
         int n=matrix.size();
         int m=matrix[0].size();
         
-        int low=0,high=m*n-1;
+        int low=0,high=m*n-1;           // imp
         
         while(low<=high) {
             
