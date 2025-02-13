@@ -16,7 +16,7 @@ class ListNode {
     class Solution {
     public :
 
-    ListNode*Reverse(ListNode *head) {
+    ListNode*Reverse(ListNode *head) {  
 
     ListNode*curr=head;
     ListNode*prev=NULL;

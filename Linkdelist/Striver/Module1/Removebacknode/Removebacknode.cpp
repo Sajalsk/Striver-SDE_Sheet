@@ -13,27 +13,27 @@ class ListNode {
         next=NULL;
     }
 
-class Solution {
-public:
+    class Solution {
+    public:
 
-    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        ListNode* removeNthFromEnd(ListNode* head, int n) {
+            
+        ListNode * start = new ListNode();
+        start -> next = head;
         
-       ListNode * start = new ListNode();
-       start -> next = head;
-       
-       ListNode*fast=start;
-       ListNode*slow=start;
+        ListNode*fast=start;
+        ListNode*slow=start;
+            
+        for(int i=0;i<n;i++)  fast=fast->next;
+            
+            while(fast->next!=NULL) {
+                fast=fast->next;
+                slow=slow->next;
+            }
+            
+            slow->next=slow->next->next;        // removal of the  node.
         
-       for(int i=0;i<n;i++)  fast=fast->next;
-           
-        while(fast->next!=NULL) {
-            fast=fast->next;
-            slow=slow->next;
-           }
-           
-        slow->next=slow->next->next;        // removal of the  node.
-       
-    return start->next;                     // returning of the linked list.
-    }
-};
+        return start->next;                     // returning of the linked list.
+        }
+    };
  };

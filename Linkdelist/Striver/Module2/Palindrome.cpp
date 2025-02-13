@@ -23,7 +23,7 @@ public:
             head=head->next;
         }
     
-        for(int i=0;i<nnums.size();i++) {
+        for(int i=0;i<nums.size();i++) {
             if(nums[i]!=nums[n-i-1]) return false;
         }
          return true;
