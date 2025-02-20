@@ -2,28 +2,28 @@
 using namespace std;
 
 class Solution {
-public:
-    void rotate(vector<vector<int>>& matrix) {
-        
-        int a=0,b=0;
-        int n=matrix.size();   
-        int m=matrix[0].size(); 
-        
-    vector<vector<int>> reverse(m, vector<int>(n,0));
-  
-        for (int j=0;j<m;j++) {
-            for (int i=n-1;i>=0;i--) {
-                reverse[a][b]=matrix[i][j];
-                b++;
+    public:
+        void rotate(vector<vector<int>>& matrix) {
+            
+            int m=matrix.size();
+            int n=matrix[0].size();
+            
+            vector<vector<int>>res(m,vector<int>(n,0));
+            int a=0,b=0;
+           
+            
+            for(int j=0;j<n;j++) {
+                for(int i=m-1;i>=0;i--) {
+                    res[a][b]=matrix[i][j];
+                    b++;
+                }
+                 b=0;
+                a++;
             }
-            a++;
-            b=0;
+             for(int i=0;i<n;i++) {
+                 for(int j=0;j<m;j++) {
+                     matrix[i][j]=res[i][j];
+                 }
+             }
         }
-        
-        for (int i=0;i<n;i++) {
-            for (int j=0;j<m;j++) {
-                matrix[i][j]=reverse[i][j];
-            }
-        }
-    }
-};
+    };
