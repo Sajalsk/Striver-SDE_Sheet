@@ -11,7 +11,7 @@ public:
         if(n<0)  n=n*-1;
      
         double ans=1;
-        for (int i=0;i<n;i++)  ans=ans*x;
+        for (int i=1;i<=n;i++)  ans=ans*x;
            
        if(m<0) return 1/ans;
        return ans;
