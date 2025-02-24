@@ -7,7 +7,8 @@ public:
     string reverseWords(string s) {
 
         stack<string> st;
-        string str = "";
+        string str = "" ;
+        string ans = "";
 
         for(int i=0; i<s.length(); i++) {
             if(s[i]== ' ') {
@@ -17,7 +18,7 @@ public:
         }
 
         st.push(str);    // for last word
-        string ans = "";
+      
 
         while(!st.empty()) {
             if(!ans.empty())  ans +=' ';             // adding space after first word no at begining

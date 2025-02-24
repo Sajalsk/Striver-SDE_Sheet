@@ -7,7 +7,7 @@ public:
     int maxLen(vector<int>&A, int n) {
            
         int maxlen=0,sum=0;
-        if(n==1 && A[0]==0) return 1;
+        if(n==1 && A[0]==0) return 1;   // 15 -2 2 -8 1 7 -15 23
         
         for (int i=0;i<n;i++) {
             sum=A[i];                        // Right way of subarray
