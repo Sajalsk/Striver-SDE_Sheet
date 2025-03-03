@@ -19,7 +19,7 @@ public:
             ds.push_back(arr[i]);
             Solve(i+1,target-arr[i],ds,ans,arr);
 
-            ds.pop_back();
+            ds.pop_back();                 // backtrack in case of sum is getting greater than target then remove it 
         }
     }
     
@@ -28,7 +28,7 @@ public:
         vector<vector<int>> ans;
         vector<int> ds;
 
-        sort(arr.begin(),arr.end());
+        sort(arr.begin(),arr.end());            // sort in case of uniqueness is not allowed.
         
         Solve(0,target,ds,ans,arr);
         return ans;
