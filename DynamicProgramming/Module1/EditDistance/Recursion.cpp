@@ -10,8 +10,8 @@ public:
         if(j<0) return i+1;
         
         if(word1[i]==word2[j]) return Solve(i-1,j-1,word1,word2);
-//          Deletion                          Insertion                    Replace                         
-      return 1+min ( Solve(i-1,j,word1,word2), min( Solve(i,j-1,word1,word2),Solve(i-1,j-1,word1,word2)));
+//                             Deletion                          Insertion                    Replace                         
+      return 1+ min( Solve(i-1,j,word1,word2), min( Solve(i,j-1,word1,word2),Solve(i-1,j-1,word1,word2)));
     }
     
     int minDistance(string word1, string word2) {
