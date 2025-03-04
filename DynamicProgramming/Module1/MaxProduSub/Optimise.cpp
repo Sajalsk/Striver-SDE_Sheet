@@ -6,12 +6,12 @@ public:
 
     int maxProduct(vector<int>& nums) {
 
-        int curr=1,max1=INT_MIN;
+        int curr=1,max_prod=INT_MIN;
         
         for(int i=0;i<nums.size();i++) {
             curr *=nums[i];
             
-            max1=max(curr,max1);
+            max_prod=max(curr,max_prod);
             if(curr==0) curr=1;
         }
         
@@ -20,9 +20,9 @@ public:
         for(int i=nums.size()-1;i>=0;i--) {
             curr *=nums[i];
             
-            max1=max(curr,max1);
+            max_prod=max(curr,max_prod);
             if(curr==0) curr=1;
         }
-         return max1;
+         return max_prod;
     }
 };

@@ -6,16 +6,16 @@ class Solution {
 
         int maxProduct(vector<int> &nums) {
 
-            int curr = INT_MIN, max1 = INT_MIN;
+            int curr = INT_MIN, max_prod = INT_MIN;      // Input: nums = [2,3,-2,4]
 
             for (int i = 0; i < nums.size(); i++) {
                 curr = 1;
                 for (int j = i; j < nums.size(); j++) {
                     curr *= nums[j];
-                    max1 = max(max1, curr);
+                    max_prod = max(max_prod, curr);
                 }
             }
-             return max1;
+             return max_prod;
         }
 };
 
