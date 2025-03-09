@@ -29,6 +29,9 @@ public:
         int n = coins.size();
         vector<vector<int>>dp(n+1,vector<int>(amount+1,-1));
 
-        return help(coins,amount,n,dp) == (INT_MAX-1) ? -1 : help(coins,amount,n,dp);
+        int res = help(coins,amount,n,dp)
+
+        if(res==INT_MAX-1)?-1:res;
+
     }
 };

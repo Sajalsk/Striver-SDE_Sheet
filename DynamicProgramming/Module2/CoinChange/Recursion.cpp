@@ -7,7 +7,7 @@ public:
     int Solve(int i,vector<int>&coins,int amount,int res) {
 
         if (i >= coins.size() || amount <= 0)  
-         return (amount == 0) ? 0 : INT_MAX - 1;   
+         return (amount == 0) ? 0 : INT_MAX - 1;    // to avoid recursion calculation so return -1
         
         if(coins[i]>amount) return  0+Solve(i+1,coins,amount,res);  
     
