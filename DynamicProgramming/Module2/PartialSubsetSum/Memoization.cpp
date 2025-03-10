@@ -9,7 +9,7 @@ class Solution{
         if(sum>target) return false;
         if(sum==target) return true;
         
-        if(dp[index][sum]!=-1) return dp[index][sum];
+        if(dp[index][sum]!=-1) return dp[index][sum];         // already visited
         
         bool take=solve(index+1,target,nums,N,sum+nums[index],dp);
         bool nottake=solve(index+1,target,nums,N,sum,dp);
