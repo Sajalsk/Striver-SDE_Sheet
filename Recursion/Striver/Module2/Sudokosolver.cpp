@@ -12,7 +12,7 @@ public:
             else if (board[i][col] == c)   return false;               // row check 
 
             else if ( board[3 * (row / 3) + i / 3][3 * (col / 3) + i % 3] == c)     // 9*9 check
-            return false;           
+            return false;           _
         }
          return true;
     }
