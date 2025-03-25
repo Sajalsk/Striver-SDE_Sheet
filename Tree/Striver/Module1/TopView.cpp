@@ -33,7 +33,7 @@ class Solution {
             Node* node = it.first; 
             int line = it.second; 
 
-            if(mpp.find(line) == mpp.end()) mpp[line] = node->data;   // change from bottom view if found then replace with new node for top view
+            if(mpp.find(line) == mpp.end()) mpp[line] = node->data;  // change from bottom view if found then replace with new node for top view
             
             if(node->left != NULL)   q.push({node->left, line-1}); 
             if(node->right != NULL)  q.push({node->right, line + 1});  
