@@ -19,22 +19,16 @@ public:
     class Solution {
     public:
 
-    void Solve(TreeNode *root) {
-
+    void mirror(Node* root) {
+       
         if(root) {
+            Node* temp = root->left; // Swapping left and right
+            root->left = root->right;
+            root->right = temp;
             
-            TreeNode *temp = root->left;     // swapping
-            root->left     = root->right;
-            root->right= temp;
-
             mirror(root->left);
             mirror(root->right);
         }
-    }
-
-    void mirror(TreeNode* root) {
-        
-        Solve(root);
     }
 };
 
