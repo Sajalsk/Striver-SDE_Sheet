@@ -32,11 +32,11 @@ public:
         st.push(i);
        }
 
-      int maxA = 0;
+      int max_val = 0;
       for (int i = 0; i < n; i++) {
-        maxA = max(maxA, heights[i] * (l[i] - r[i] + 1));
+        max_val= max(max_val, heights[i] * (l[i] - r[i] + 1));
       }
         
-      return maxA;
+      return max_val;
     }
 };
