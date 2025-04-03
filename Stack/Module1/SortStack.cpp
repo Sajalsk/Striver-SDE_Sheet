@@ -13,7 +13,6 @@ using namespace std;
     insert(s,temp);                // to check again if now temp should be inserted
     
     s.push(val);
-
     return;
 }
 
@@ -25,7 +24,7 @@ void sortStack(stack<int>& s) {
     int temp= s.top();
     s.pop();
 
-    sortStack(s);                        // last elem of stack
+    sortStack(s);                        // reaching to  the last elem of stack
     insert(s,temp);
 
     return;

@@ -4,7 +4,7 @@ using namespace std;
 class Solution {
 public:
 
- vector<int> Solution::prevSmaller(vector<int> &nums) {   // 4, 5, 2, 10, 8
+ vector<int> Solution::prevSmaller(vector<int> &nums) {   // 4, 5, 2, 10, 8   -1 4 -1 2 2 
     
     vector<int> res;
     stack<int>  s;
@@ -16,7 +16,7 @@ public:
     
     for(int i=1;i<n;i++) {
         
-        while(s.size()!=0 && nums[i]<=s.top())  s.pop();
+        while(s.size()!=0 && nums[i]<=s.top())  s.pop();       //  5 <=4 
     
         int val=(s.empty())?-1:s.top();
         res.push_back(val);

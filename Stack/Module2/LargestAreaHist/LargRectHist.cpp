@@ -3,7 +3,7 @@ using namespace std;
 
 class Solution {
 public:
-    int largestRectangleArea(vector<int>& heights) {
+    int largestRectangleArea(vector<int>& heights) {  //  [2,1,5,6,2,3] 10
         
        int n=heights.size();
 
@@ -13,7 +13,7 @@ public:
        stack<int>st;
         
         for (int i=0;i<n;i++) {
-        while(!st.empty() && heights[i]<=heights[st.top()]) {
+        while(!st.empty() && heights[i]<=heights[st.top()]) { 
             st.pop();
         }
 
@@ -21,7 +21,7 @@ public:
         st.push(i);
        }
 
-       while(!st.empty()) st.pop();
+       while(!st.empty()) st.pop(); 
 
        for (int i=n-1;i>=0;i--) {     
         while(!st.empty() && heights[i]<=heights[st.top()]) {

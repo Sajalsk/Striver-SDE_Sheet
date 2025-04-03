@@ -14,7 +14,7 @@ class Solution {
                     st.push(s[i]);   
                 } 
                    else if (s[i]==')') {
-                     if(st.empty() || st.top()!='(' ) return false;
+                     if(st.empty() || st.top()!='(' ) return false; // aware of the fact , what if only comes the closing brackets !!
                      else st.pop();
                 } 
                   else if (s[i]=='}') {
