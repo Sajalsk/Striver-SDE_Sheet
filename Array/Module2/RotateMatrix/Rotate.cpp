@@ -12,14 +12,15 @@ class Solution {
             int a=0,b=0;
            
             
-            for(int j=0;j<n;j++) {
-                for(int i=m-1;i>=0;i--) {
-                    res[a][b]=matrix[i][j];
+            for(int j=0;j<n;j++) {                  // coln constant
+               for(int i=m-1;i>=0;i--) {
+                    res[a][b]=matrix[i][j];         // decreasing the row 
                     b++;
                 }
-                 b=0;
-                a++;
+                  b=0;
+                  a++;
             }
+
              for(int i=0;i<n;i++) {
                  for(int j=0;j<m;j++) {
                      matrix[i][j]=res[i][j];
