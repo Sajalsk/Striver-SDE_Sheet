@@ -9,7 +9,7 @@ public:
         int n=nums.size();
         unordered_map<int, int> mpp;
                
-    for(int i=0;i<n;i++) {
+        for(int i=0;i<n;i++) {
 
             if(mpp.find(target-nums[i])!=mpp.end()) {
                  return {i,mpp[target-nums[i]]};    // index of ( target - nums[i] )element
