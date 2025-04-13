@@ -18,15 +18,12 @@ public:
             if(haystack[i]==needle[j]) {
                 i++; 
                 j++;     
-            }
-            
-             else {
+            } else {
                 j=0;                        // needle to the start
                 i=i-j+1;  
              }  
             
-        }  
-         return j==n?i-j:-1;               // if gone to full length();
+        }  return j==n?i-j:-1;               // if gone to full length();
         
     }
 };
