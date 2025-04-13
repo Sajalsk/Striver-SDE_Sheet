@@ -23,11 +23,11 @@ public:
         
         while(fast && fast->next) {
             
-            slow = slow->next;
             fast = fast->next->next;
+            slow = slow->next;
 
             if(slow == fast) {
-                while(slow != head){
+                while(head != slow){
                     slow = slow->next;
                     head = head->next;
                 }
