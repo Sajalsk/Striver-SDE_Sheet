@@ -13,7 +13,7 @@ public:
             return;
         }
         
-        if(candidates[ind]<=target) {
+        if(candidates[ind]<=target) {                             // taken
 
            ds.push_back(candidates[ind]);
            solve(ind,candidates,ans,ds,target-candidates[ind]);   //ind since taking is allowed multiple time
@@ -21,7 +21,7 @@ public:
            ds.pop_back();                                          // backtracking
         } 
     
-         solve(ind+1,candidates,ans,ds,target);  
+         solve(ind+1,candidates,ans,ds,target);                    // Not- taken
     }
     
     vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
