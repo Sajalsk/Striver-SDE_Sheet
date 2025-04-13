@@ -6,28 +6,25 @@ public:
 
     vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
 
-        int n=nums2.size();
-        
         vector<int>ans;
         stack<int>st;
+        
+        int n=nums2.size();
 
         unordered_map<int,int>mp;
 
- //  [4,1,2]  [1,3,4,2]     [-1,3,-1]  [3,4,-1,-1]
-       
         for(int i=n-1;i>=0;i--) {                       
 
-            while(!st.empty() && nums2[i]>=st.top()) {        // Selection array
+            while(!st.empty() && nums2[i]>=st.top()) {
                 st.pop();
             }
-
-            int res=(st.empty())? -1 : st.top();
+              int res=(st.empty())? -1 : st.top();
           
-            mp.insert({nums2[i],res});                       // num and its result
+            mp.insert({nums2[i],res});                     
             st.push(nums2[i]);   
         }
 
-        for(auto it:nums1)  ans.push_back(mp[it]);          // given query and its result
+        for(auto it:nums1)  ans.push_back(mp[it]);         
 
         return ans;
 

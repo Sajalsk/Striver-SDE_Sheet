@@ -13,7 +13,7 @@ public:
        stack<int>st;
         
         for (int i=0;i<n;i++) {
-        while(!st.empty() && heights[i]<=heights[st.top()]) { 
+        while(!st.empty() && heights[i]<=heights[st.top()]) {            // next greater elem
             st.pop();
         }
 
@@ -24,7 +24,7 @@ public:
        while(!st.empty()) st.pop(); 
 
        for (int i=n-1;i>=0;i--) {     
-        while(!st.empty() && heights[i]<=heights[st.top()]) {
+        while(!st.empty() && heights[i]<=heights[st.top()]) {             // // next smaller elem
             st.pop();
         }
 
